@@ -82,6 +82,3 @@ crashlytics-build.properties
 .erp
 /[Aa]ssets/ERP
 /[Aa]ssets/ERP.meta
-
-# Zu große Dateien von Assets
-/[Aa]ssets/[Tt]oon [Ff]antasy [Nn]ature/Scenes
