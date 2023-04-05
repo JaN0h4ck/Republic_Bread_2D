@@ -22,20 +22,42 @@ public class MainCharMovement : MonoBehaviour
         lastPos = transform.position;
     }
 
-    public void OnClick() {
-        Debug.Log("clicked");
-        Vector2Control pointerPosition = Pointer.current.position;
-
-        Ray ray = Camera.main.ScreenPointToRay(pointerPosition.value);
-        RaycastHit hit;
-        // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity)) {
+    public void OnClickLeft() {
+        if (calculateRaycast(Pointer.current.position,out RaycastHit hit)) {
             Vector3 hitpoint = new Vector3(hit.point.x, 0, hit.point.z);
             agent.SetDestination(hitpoint);
         } else {
             Debug.Log("No Hit");
         }
     }
+
+    public void OnClickRight() {
+        if (calculateRaycast(Pointer.current.position, out RaycastHit hit)) {
+            Vector3 hitpoint = new Vector3(hit.point.x, 0, hit.point.z);
+            Vector3 distance = transform.position - hit.point;
+            if(distance.magnitude >= (agent.stoppingDistance + .75f))
+                agent.SetDestination(hitpoint);
+            else {
+                switch(hit.transform.tag) {
+                    case "Interactable":
+                        Debug.Log("Interactable");
+                        break;
+                    default:
+                        Debug.Log("No Tag");
+                        break;
+                }
+            }
+            // Interaktions Logik
+        } else {
+            Debug.Log("No Hit");
+        }
+    }
+
+    private bool calculateRaycast(Vector2Control pointerPosition,out RaycastHit hit) {
+        Ray ray = Camera.main.ScreenPointToRay(pointerPosition.value);
+        return Physics.Raycast(ray, out hit, Mathf.Infinity);
+    }
+
 
     private void Update() {
         if (agent.velocity.magnitude > 0) {

@@ -6,9 +6,18 @@
             "id": "7b930fe2-83a7-4c90-b1b0-7ddf9bf722c4",
             "actions": [
                 {
-                    "name": "Click",
+                    "name": "ClickLeft",
                     "type": "Button",
                     "id": "31cce839-55be-4323-a30f-a6ed095f7828",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ClickRight",
+                    "type": "Button",
+                    "id": "41fdd932-129f-4f64-9048-1ab73bb78c37",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -23,7 +32,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Click",
+                    "action": "ClickLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "21a184a2-2b9a-4582-8d76-288a96aa2c8c",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "ClickRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
