@@ -4,9 +4,23 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.AI;
+using System;
 
 public class MainCharMovement : MonoBehaviour
 {
+    private enum Directions {
+        up = 0x01, // 0001
+        down = 0x02, // 0010
+        left = 0x04, // 0100
+        right = 0x08, // 1000
+        upright = 0x09, //1001
+        downright = 0x0A, //1010
+        upleft = 0x05, // 0101
+        downleft = 0x06 // 0110
+    }
+
+    private Directions movementDirection = 0x00;
+
     private NavMeshAgent agent;
 
     private SpriteRenderer spriteRenderer;
@@ -23,7 +37,7 @@ public class MainCharMovement : MonoBehaviour
     }
 
     public void OnClickLeft() {
-        if (calculateRaycast(Pointer.current.position,out RaycastHit hit)) {
+        if (CalculateRaycast(Pointer.current.position,out RaycastHit hit)) {
             Vector3 hitpoint = new Vector3(hit.point.x, 0, hit.point.z);
             agent.SetDestination(hitpoint);
         } else {
@@ -32,7 +46,7 @@ public class MainCharMovement : MonoBehaviour
     }
 
     public void OnClickRight() {
-        if (calculateRaycast(Pointer.current.position, out RaycastHit hit)) {
+        if (CalculateRaycast(Pointer.current.position, out RaycastHit hit)) {
             Vector3 hitpoint = new Vector3(hit.point.x, 0, hit.point.z);
             Vector3 distance = transform.position - hit.point;
             if(distance.magnitude >= (agent.stoppingDistance + .75f))
@@ -53,63 +67,63 @@ public class MainCharMovement : MonoBehaviour
         }
     }
 
-    private bool calculateRaycast(Vector2Control pointerPosition,out RaycastHit hit) {
+    private bool CalculateRaycast(Vector2Control pointerPosition,out RaycastHit hit) {
         Ray ray = Camera.main.ScreenPointToRay(pointerPosition.value);
         return Physics.Raycast(ray, out hit, Mathf.Infinity);
     }
 
+    void CalculateDirection() {
+        movementDirection = 0x00;
+        Vector3 currentPos = transform.position;
+        Vector3 agentDirection = lastPos - currentPos;
+        lastPos = currentPos;
+        agentDirection.Normalize();
+        switch(agentDirection.z) {
+            case <= -.5f:
+                movementDirection += 0x01;
+                break;
+            case >= .5f:
+                movementDirection += 0x02;
+                break;
+        }
+        switch(agentDirection.x) {
+            case >= .5f:
+                movementDirection += 0x04;
+                break;
+            case <= -.5f:
+                movementDirection += 0x08;
+                break;
+        }
+    }
 
     private void Update() {
         if (agent.velocity.magnitude > 0) {
-            Vector3 currentPos = transform.position;
-            Vector3 direction = lastPos - currentPos;
-            lastPos = currentPos;
-            direction.Normalize();
-
-            #region bool logic
-            bool up = (direction.z <= -.5);// && direction.x <= .5 && direction.x >= -.5);
-            bool down = (direction.z >= .5);// && direction.x <= .5 && direction.x >= -.5);
-            bool left = (direction.x >= .5);// && direction.y < .5 && direction.y > -.5);
-            bool right = (direction.x <= -.5);
-            bool upleft = (up && left);
-            bool upright = (up && right);
-            bool upsideways = (upleft || upright);
-            bool downleft = (down && left);
-            bool downright = (down && right);
-            bool downsideways = (downleft || downright);
-            bool sideways = (left || right);
-            #endregion
-
-            if (up && !sideways) {
-                spriteRenderer.sprite = sprites.up;
-                return;
-            } else if (down && !sideways) {
-                spriteRenderer.sprite = sprites.down;
-                return;
-            } else if (sideways) {
-                if (downsideways) {
-                    if (downleft) {
-                        spriteRenderer.sprite = sprites.downLeft;
-                        return;
-                    } else if (downright) {
-                        spriteRenderer.sprite = sprites.downRight;
-                        return;
-                    }
-                } else if (upsideways) {
-                    if (upleft) {
-                        spriteRenderer.sprite = sprites.upLeft;
-                        return;
-                    } else if (upright) {
-                        spriteRenderer.sprite = sprites.upRight;
-                        return;
-                    }
-                } else if(left) {
+            CalculateDirection();
+            switch(movementDirection) {
+                case Directions.up:
+                    spriteRenderer.sprite = sprites.up;
+                    break;
+                case Directions.down:
+                    spriteRenderer.sprite = sprites.down;
+                    break;
+                case Directions.left:
                     spriteRenderer.sprite = sprites.left;
-                    return;
-                } else if(right) {
+                    break;
+                case Directions.right:
                     spriteRenderer.sprite = sprites.right;
-                    return;
-                }
+                    break;
+                case Directions.upleft:
+                    spriteRenderer.sprite = sprites.upLeft;
+                    break;
+                case Directions.downleft:
+                    spriteRenderer.sprite = sprites.downLeft;
+                    break;
+                case Directions.upright:
+                    spriteRenderer.sprite = sprites.upRight;
+                    break;
+                case Directions.downright:
+                    spriteRenderer.sprite = sprites.downRight;
+                    break;
             }
         }
     }
