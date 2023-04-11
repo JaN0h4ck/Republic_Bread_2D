@@ -8,7 +8,7 @@ using System;
 
 public class MainCharMovement : MonoBehaviour
 {
-    private enum Directions {
+    public enum Directions {
         up = 0x01, // 0001
         down = 0x02, // 0010
         left = 0x04, // 0100
@@ -20,6 +20,10 @@ public class MainCharMovement : MonoBehaviour
     }
 
     private Directions movementDirection = 0x00;
+
+    public Directions playerDirection { 
+        get { return movementDirection; } 
+    }
 
     private NavMeshAgent agent;
 
@@ -72,25 +76,28 @@ public class MainCharMovement : MonoBehaviour
         return Physics.Raycast(ray, out hit, Mathf.Infinity);
     }
 
-    void CalculateDirection() {
+    /// <summary>
+    /// Calculates the direction the Player is moving towards and set the movementDirection Variable accordingly
+    /// </summary>
+    private void CalculateDirection() {
         movementDirection = 0x00;
         Vector3 currentPos = transform.position;
         Vector3 agentDirection = lastPos - currentPos;
         lastPos = currentPos;
         agentDirection.Normalize();
         switch(agentDirection.z) {
-            case <= -.5f:
+            case <= -.5f: // up
                 movementDirection += 0x01;
                 break;
-            case >= .5f:
+            case >= .5f: // down
                 movementDirection += 0x02;
                 break;
         }
         switch(agentDirection.x) {
-            case >= .5f:
+            case >= .5f: // left
                 movementDirection += 0x04;
                 break;
-            case <= -.5f:
+            case <= -.5f: //right
                 movementDirection += 0x08;
                 break;
         }
