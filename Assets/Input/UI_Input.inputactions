@@ -1,0 +1,34 @@
+{
+    "name": "UI_Input",
+    "maps": [
+        {
+            "name": "UI",
+            "id": "7a1284c2-786d-4d88-a711-9769eca92a7a",
+            "actions": [
+                {
+                    "name": "ToggleInventory",
+                    "type": "Button",
+                    "id": "82b574cc-8b89-4c0b-85e2-98ff707201b3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d3a409b2-7cd7-499b-bc43-bea94ceca9f3",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
