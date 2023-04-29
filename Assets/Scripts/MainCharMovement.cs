@@ -90,6 +90,14 @@ public class MainCharMovement : MonoBehaviour
         }
     }
 
+    public void OnSave() {
+        inventory.Save();
+    }
+
+    public void OnLoad() {
+        inventory.Load();
+    }
+
     private bool CheckAgentInRange(RaycastHit hit, out Vector3 hitpoint) {
         hitpoint = new Vector3(hit.point.x, 0, hit.point.z);
         Vector3 distance = transform.position - hit.point;

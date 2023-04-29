@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 504d922bcb15820418586279c9c159d4, type: 3}
   m_Name: MainCharSprites
   m_EditorClassIdentifier: 
-  up: {fileID: 21300000, guid: b80812144b75d6d4886082f949878050, type: 3}
-  down: {fileID: 21300000, guid: 718217d981926fa49841402e33acd947, type: 3}
-  left: {fileID: 21300000, guid: 7e8b59ea8ed7dcc41bdc206414bd41c3, type: 3}
-  right: {fileID: 21300000, guid: 3de7d974c38f4e64e9675837217adbb1, type: 3}
-  upLeft: {fileID: 21300000, guid: 14da2332b65110c4782c8190941518d4, type: 3}
-  upRight: {fileID: 21300000, guid: 79689f3d7fa16b34da7672c3223f6fd0, type: 3}
-  downLeft: {fileID: 21300000, guid: 991c8ed84c4c13f46b2bd6e8e31b42a2, type: 3}
-  downRight: {fileID: 21300000, guid: 1f250cc82c4c3dd439b005281af9be77, type: 3}
+  up: {fileID: 21300000, guid: 7850c72465e4aed479f0ffe85cc34e77, type: 3}
+  down: {fileID: 21300000, guid: c57963a6ac1e09e458892a6eeec3f4bc, type: 3}
+  left: {fileID: 21300000, guid: bda2f3ba8fa188e44825deca3868803b, type: 3}
+  right: {fileID: 21300000, guid: e6f579daf00bfa649959b2819907e5f9, type: 3}
+  upLeft: {fileID: 21300000, guid: 536cc003b27185d40aabc7687f82525f, type: 3}
+  upRight: {fileID: 21300000, guid: 4f96d7c080431dd4d88077f688c9f5d2, type: 3}
+  downLeft: {fileID: 21300000, guid: 6f587a97999e1ab47829ac2a69f825b9, type: 3}
+  downRight: {fileID: 21300000, guid: 49db4e072f7216f4297a9cf1795a9962, type: 3}
