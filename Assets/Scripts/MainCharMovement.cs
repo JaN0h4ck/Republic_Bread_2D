@@ -31,6 +31,8 @@ public class MainCharMovement : MonoBehaviour
 
     private Vector3 lastPos;
 
+    public InventoryObject inventory;
+
     [SerializeField]
     private CharacterSprites sprites;
 
@@ -42,8 +44,27 @@ public class MainCharMovement : MonoBehaviour
 
     public void OnClickLeft() {
         if (CalculateRaycast(Pointer.current.position,out RaycastHit hit)) {
-            Vector3 hitpoint = new Vector3(hit.point.x, 0, hit.point.z);
-            agent.SetDestination(hitpoint);
+            Item item;
+            switch (hit.transform.tag) {
+                case "Walkable":
+                    Vector3 hitpoint = new Vector3(hit.point.x, 0, hit.point.z);
+                    agent.SetDestination(hitpoint);
+                    break;
+                case "Item":
+                    if (!CheckAgentInRange(hit, out Vector3 _hitpoint))
+                        agent.SetDestination(_hitpoint);
+                    else {
+                        item = hit.transform.GetComponent<Item>();
+                        if (item) {
+                            inventory.AddItem(item.item, 1);
+                            Destroy(hit.transform.gameObject);
+                        } else {
+                            Debug.Log("No Item");
+                        }
+                    }
+                    break;
+            }
+            
         } else {
             Debug.Log("No Hit");
         }
@@ -51,9 +72,7 @@ public class MainCharMovement : MonoBehaviour
 
     public void OnClickRight() {
         if (CalculateRaycast(Pointer.current.position, out RaycastHit hit)) {
-            Vector3 hitpoint = new Vector3(hit.point.x, 0, hit.point.z);
-            Vector3 distance = transform.position - hit.point;
-            if(distance.magnitude >= (agent.stoppingDistance + .75f))
+            if(!CheckAgentInRange(hit, out Vector3 hitpoint))
                 agent.SetDestination(hitpoint);
             else {
                 switch(hit.transform.tag) {
@@ -69,6 +88,15 @@ public class MainCharMovement : MonoBehaviour
         } else {
             Debug.Log("No Hit");
         }
+    }
+
+    private bool CheckAgentInRange(RaycastHit hit, out Vector3 hitpoint) {
+        hitpoint = new Vector3(hit.point.x, 0, hit.point.z);
+        Vector3 distance = transform.position - hit.point;
+        if (distance.magnitude >= (agent.stoppingDistance))
+            return false;
+        else
+            return true;
     }
 
     private bool CalculateRaycast(Vector2Control pointerPosition,out RaycastHit hit) {
@@ -133,5 +161,9 @@ public class MainCharMovement : MonoBehaviour
                     break;
             }
         }
+    }
+
+    private void OnApplicationQuit() {
+        inventory.Container.Clear();
     }
 }
