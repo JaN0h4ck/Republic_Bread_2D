@@ -14,13 +14,24 @@ public class InventoryObject : ScriptableObject
 
 
     public void AddItem(Item _item, int _amount) {
-        //for (int i = 0; i < Container.Items.Length; i++) {
-        //    if (Container.Items[i].Item.id == _item.id) {
-        //        Container.Items[i].AddAmount(_amount);
-        //        return;
-        //    }
-        //}
-        //Container.Items.Add(new InventorySlot(_item.id,_item, _amount));
+        for (int i = 0; i < Container.Items.Length; i++) {
+            if (Container.Items[i].Item.id == _item.id) {
+                Container.Items[i].AddAmount(_amount);
+                return;
+            }
+        }
+        SetFirstEmptySlot(_item, _amount);
+    }
+
+    public InventorySlot SetFirstEmptySlot(Item _item, int amount) {
+        for (int i = 0;i < Container.Items.Length;i++) {
+            if (Container.Items[i].ID <= -1) {
+                Container.Items[i].UpdateSlot(_item.id, _item, amount);
+                return Container.Items[i];
+            }
+        }
+        //Inventory full
+        return null;
     }
 
     [ContextMenu("Save")]
@@ -60,7 +71,18 @@ public class InventorySlot {
     public int ID;
     public Item Item;
     public int amount;
+    public InventorySlot() {
+        ID = -1;
+        Item = null;
+        amount = 0;
+    }
     public InventorySlot(int _id, Item _item, int _amount) {
+        ID = _id;
+        Item = _item;
+        amount = _amount;
+    }
+
+    public void UpdateSlot(int _id, Item _item, int _amount) {
         ID = _id;
         Item = _item;
         amount = _amount;
