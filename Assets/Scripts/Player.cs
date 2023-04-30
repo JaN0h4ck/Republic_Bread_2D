@@ -54,6 +54,7 @@ public class Player : Utils.Singleton<Player>
     }
 
     public void OnClickLeft() {
+        StopAllCoroutines();
         if (CalculateRaycast(Pointer.current.position,out RaycastHit hit)) {
             GroundItem item;
             switch (hit.transform.tag) {
@@ -62,9 +63,10 @@ public class Player : Utils.Singleton<Player>
                     agent.SetDestination(hitpoint);
                     break;
                 case "Item":
-                    if (!CheckAgentInRange(hit, out Vector3 _hitpoint))
-                        agent.SetDestination(_hitpoint);
-                    else {
+                    if (!CheckAgentInRange(hit)) {
+                        agent.SetDestination(new Vector3(hit.point.x, 0, hit.point.y));
+                        StartCoroutine(WaitForAgentToReachItem(hit));
+                    } else {
                         item = hit.transform.GetComponent<GroundItem>();
                         if (item) {
                             inventory.AddItem(new Item(item.item), 1);
@@ -81,10 +83,24 @@ public class Player : Utils.Singleton<Player>
         }
     }
 
+    private IEnumerator WaitForAgentToReachItem(RaycastHit hit) {
+        yield return new WaitForEndOfFrame();
+        while (!CheckAgentInRange(hit)) {
+            yield return new WaitForEndOfFrame();
+        }
+        GroundItem item = hit.transform.GetComponent<GroundItem>();
+        if (item) {
+            inventory.AddItem(new Item(item.item), 1);
+            Destroy(hit.transform.gameObject);
+        } else {
+            Debug.Log("No Item");
+        }
+    }
+
     public void OnClickRight() {
         if (CalculateRaycast(Pointer.current.position, out RaycastHit hit)) {
-            if(!CheckAgentInRange(hit, out Vector3 hitpoint))
-                agent.SetDestination(hitpoint);
+            if(!CheckAgentInRange(hit))
+                agent.SetDestination(new Vector3(hit.point.x, 0, hit.point.y));
             else {
                 switch(hit.transform.tag) {
                     case "Interactable":
@@ -109,10 +125,9 @@ public class Player : Utils.Singleton<Player>
         inventory.Load();
     }
 
-    private bool CheckAgentInRange(RaycastHit hit, out Vector3 hitpoint) {
-        hitpoint = new Vector3(hit.point.x, 0, hit.point.z);
+    private bool CheckAgentInRange(RaycastHit hit) {
         Vector3 distance = transform.position - hit.point;
-        if (distance.magnitude >= (agent.stoppingDistance))
+        if (distance.magnitude >= (agent.stoppingDistance + .5f))
             return false;
         else
             return true;

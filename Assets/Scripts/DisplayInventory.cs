@@ -28,7 +28,6 @@ public class DisplayInventory : MonoBehaviour
         foreach (KeyValuePair<GameObject, InventorySlot> _slot in itemsDisplayed) {
             if(_slot.Value.ID >= 0) {
                 Image imageComponent = _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>();
-                Debug.Log("Item ID: " + _slot.Value.Item.id + "\n Image Component: " + _slot); 
                 imageComponent.sprite = inventory.database.GetItem(_slot.Value.Item.id).uiDisplay;
                 imageComponent.color = new Color(1, 1, 1, 1);
                 _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = _slot.Value.amount == 1 ? "" : _slot.Value.amount.ToString("n0");
