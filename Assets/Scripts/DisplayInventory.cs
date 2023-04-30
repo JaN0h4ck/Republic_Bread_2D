@@ -14,6 +14,9 @@ public class DisplayInventory : MonoBehaviour
     public GameObject inventoryPrefab;
     public InventoryObject inventory;
 
+    [SerializeField]
+    private TextMeshProUGUI itemDisplayText;
+
     Dictionary<GameObject, InventorySlot> itemsDisplayed = new Dictionary<GameObject, InventorySlot>();
 
     void Start() {
@@ -56,6 +59,8 @@ public class DisplayInventory : MonoBehaviour
         }
     }
 
+
+    #region Input
     private void AddEvent(GameObject obj, EventTriggerType type, UnityAction<BaseEventData> action) {
         EventTrigger trigger = obj.GetComponent<EventTrigger>();
         EventTrigger.Entry entry = new EventTrigger.Entry();
@@ -68,11 +73,13 @@ public class DisplayInventory : MonoBehaviour
         mouseItem.hoverObject = obj;
         if(itemsDisplayed.ContainsKey(obj)) {
             mouseItem.hoverSlot = itemsDisplayed[obj];
+            itemDisplayText.text = itemsDisplayed[obj].Item.name;
         }
     }
     public void OnExit(GameObject obj) {
         mouseItem.hoverObject = null;
         mouseItem.hoverSlot = null;
+        itemDisplayText.text = "";
     }
     public void OnDragStart(GameObject obj) {
         var mouseObject = new GameObject();
@@ -102,6 +109,7 @@ public class DisplayInventory : MonoBehaviour
             mouseItem._object.GetComponent<RectTransform>().position = Input.mousePosition;
         }
     }
+    #endregion
 }
 
 public class MouseItem {
