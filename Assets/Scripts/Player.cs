@@ -8,6 +8,7 @@ using System;
 
 public class Player : Utils.Singleton<Player>
 {
+    public Unified_Input inputActions;
     public enum Directions {
         up = 0x01, // 0001
         down = 0x02, // 0010
@@ -40,6 +41,16 @@ public class Player : Utils.Singleton<Player>
         agent = GetComponent<NavMeshAgent>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         lastPos = transform.position;
+
+        inputActions = new Unified_Input();
+    }
+
+    private void OnEnable() {
+        inputActions.Player.Interact.performed += _ => OnClickLeft();
+        inputActions.Player.Inspect.performed += _ => OnClickRight();
+        inputActions.Player.Save.performed += _ => OnSave();
+        inputActions.Player.Load.performed += _ => OnLoad();
+        inputActions.Player.Enable();
     }
 
     public void OnClickLeft() {

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918cabe312027df44b1730481fd4e119, type: 3}
   m_Name: Aluhut
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8639930348587003301, guid: 0fff1f5ac2374434091db7b94b453042, type: 3}
+  ID: 0
   uiDisplay: {fileID: 21300000, guid: b12d962ab857f0e45a641d9b0ecea27b, type: 3}
   type: 3
   description: "+1 R\xFCstung"

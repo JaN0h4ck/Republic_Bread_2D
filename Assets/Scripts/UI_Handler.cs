@@ -5,8 +5,7 @@ using UnityEngine.InputSystem;
 
 public class UI_Handler : MonoBehaviour
 {
-    private UI_Input inputActions;
-    private InputAction toggleInventory;
+    private Unified_Input inputActions;
 
     private GameObject inventorySystem;
 
@@ -14,31 +13,28 @@ public class UI_Handler : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        inputActions = new UI_Input();
         inventorySystem = GetComponentInChildren<DisplayInventory>().transform.gameObject;
         inventorySystem.SetActive(false);
         isInventoryOpen = false;
     }
 
-    void OnEnable() {
-        toggleInventory = inputActions.UI.ToggleInventory;
-        toggleInventory.performed += ToggleInventory;
-        toggleInventory.Enable();
+    void Start() {
+        inputActions = Player.Instance.inputActions;
+        inputActions.UI.ToggleInventory.performed += ToggleInventory;
+        inputActions.UI.ToggleInventory.Enable();
     }
 
     private void ToggleInventory(InputAction.CallbackContext obj) {
         if(isInventoryOpen) {
             inventorySystem.SetActive(false);
             isInventoryOpen = false;
+            inputActions.Player.Interact.Enable();
+            inputActions.Player.Inspect.Enable();
         } else {
             inventorySystem.SetActive(true);
             isInventoryOpen = true;
+            inputActions.Player.Interact.Disable();
+            inputActions.Player.Inspect.Disable();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
