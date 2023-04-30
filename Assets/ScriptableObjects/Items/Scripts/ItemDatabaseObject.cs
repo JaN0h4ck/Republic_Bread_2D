@@ -22,12 +22,13 @@ public class ItemDatabaseObject : ScriptableObject, ISerializationCallbackReceiv
     }
 
     public void OnAfterDeserialize() {
-        ItemDatbase = new Dictionary<ItemObject, int>();
         for (int i = 0; i < items.Length; i++) {
+            items[i].ID = i;
             ItemDatbase.Add(items[i], i);
         }
     }
 
     public void OnBeforeSerialize() {
+        ItemDatbase = new Dictionary<ItemObject, int>();
     }
 }

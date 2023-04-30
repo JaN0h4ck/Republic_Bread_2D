@@ -44,7 +44,7 @@ public class MainCharMovement : MonoBehaviour
 
     public void OnClickLeft() {
         if (CalculateRaycast(Pointer.current.position,out RaycastHit hit)) {
-            Item item;
+            GroundItem item;
             switch (hit.transform.tag) {
                 case "Walkable":
                     Vector3 hitpoint = new Vector3(hit.point.x, 0, hit.point.z);
@@ -54,9 +54,9 @@ public class MainCharMovement : MonoBehaviour
                     if (!CheckAgentInRange(hit, out Vector3 _hitpoint))
                         agent.SetDestination(_hitpoint);
                     else {
-                        item = hit.transform.GetComponent<Item>();
+                        item = hit.transform.GetComponent<GroundItem>();
                         if (item) {
-                            inventory.AddItem(item.item, 1);
+                            inventory.AddItem(new Item(item.item), 1);
                             Destroy(hit.transform.gameObject);
                         } else {
                             Debug.Log("No Item");
@@ -172,6 +172,6 @@ public class MainCharMovement : MonoBehaviour
     }
 
     private void OnApplicationQuit() {
-        inventory.Container.Clear();
+        //inventory.Container.Items.Clear();
     }
 }
