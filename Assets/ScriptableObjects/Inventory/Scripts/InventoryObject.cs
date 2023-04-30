@@ -23,6 +23,12 @@ public class InventoryObject : ScriptableObject
         SetFirstEmptySlot(_item, _amount);
     }
 
+    public void SwapItems(InventorySlot item1, InventorySlot item2) {
+        InventorySlot temp = new InventorySlot(item2.ID, item2.Item, item2.amount);
+        item2.UpdateSlot(item1.ID, item1.Item, item1.amount);
+        item1.UpdateSlot(temp.ID, temp.Item, temp.amount);
+    }
+
     public InventorySlot SetFirstEmptySlot(Item _item, int amount) {
         for (int i = 0;i < Container.Items.Length;i++) {
             if (Container.Items[i].ID <= -1) {

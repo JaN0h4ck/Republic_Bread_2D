@@ -15,4 +15,124 @@ MonoBehaviour:
   savePath: /inventory.save
   database: {fileID: 11400000, guid: 9017d79df74aacb44b428e3a2835a0fb, type: 2}
   Container:
-    Items: []
+    Items:
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
+    - ID: -1
+      Item:
+        name: 
+        id: 0
+      amount: 0
