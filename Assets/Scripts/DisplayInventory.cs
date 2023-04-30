@@ -14,6 +14,8 @@ public class DisplayInventory : MonoBehaviour
     public GameObject inventoryPrefab;
     public InventoryObject inventory;
 
+    Color defaultSlotColor;
+
     [SerializeField]
     private TextMeshProUGUI itemDisplayText;
 
@@ -21,6 +23,7 @@ public class DisplayInventory : MonoBehaviour
 
     void Start() {
         CreateSlots();
+        defaultSlotColor = inventoryPrefab.GetComponent<Image>().color;
     }
 
     void Update() {
@@ -74,12 +77,22 @@ public class DisplayInventory : MonoBehaviour
         if(itemsDisplayed.ContainsKey(obj)) {
             mouseItem.hoverSlot = itemsDisplayed[obj];
             itemDisplayText.text = itemsDisplayed[obj].Item.name;
+            int id = itemsDisplayed[obj].ID;
+            if (mouseItem._object != null && id > 0) {
+                ItemObject hoverItem = inventory.database.GetItem(id);
+                if (hoverItem.type == ItemType.CraftingComponent && mouseItem.item.ID == hoverItem.requiredItem.ID) {
+                    obj.GetComponent<Image>().color = Color.green;
+                } else {
+                    obj.GetComponent<Image>().color = Color.red;
+                }
+            }
         }
     }
     public void OnExit(GameObject obj) {
         mouseItem.hoverObject = null;
         mouseItem.hoverSlot = null;
         itemDisplayText.text = "";
+        obj.GetComponent<Image>().color = defaultSlotColor;
     }
     public void OnDragStart(GameObject obj) {
         var mouseObject = new GameObject();

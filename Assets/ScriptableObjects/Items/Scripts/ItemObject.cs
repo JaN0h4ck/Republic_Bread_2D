@@ -1,9 +1,10 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum ItemType {
     Food,
     Equipment,
-    Craftable,
+    CraftingComponent,
     Default
 }
 public abstract class ItemObject : ScriptableObject
@@ -13,6 +14,10 @@ public abstract class ItemObject : ScriptableObject
     public ItemType type;
     [TextArea(15, 20)]
     public string description;
+
+    public ItemObject craftedInto;
+    public ItemObject requiredItem;
+    public bool isCraftable = false;
 }
 
 [System.Serializable]
