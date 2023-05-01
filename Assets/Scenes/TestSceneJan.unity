@@ -811,6 +811,7 @@ MonoBehaviour:
   inventoryPrefab: {fileID: 591732130004495438, guid: 78ff49f97b85bdf4d9d7c336beb7f695, type: 3}
   inventory: {fileID: 11400000, guid: cc2eaa41c29a20c459af0ca2c2c40aa9, type: 2}
   itemDisplayText: {fileID: 1021743636}
+  cursorTextures: {fileID: 11400000, guid: a9d9f2000458c6a4c8cf4f6376f0fb14, type: 2}
 --- !u!114 &488289963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,15 +1221,59 @@ PrefabInstance:
       objectReference: {fileID: 7545569452688597077, guid: 3d250b64ce5bd8148b7eb76fdf6add0d, type: 3}
     - target: {fileID: 1930810448158217600, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
       propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930810448158217600, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
+      propertyPath: onNodeComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1930810448158217600, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
       propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1930810448158217600, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1674129557}
+    - target: {fileID: 1930810448158217600, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
+      propertyPath: onNodeComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930810448158217600, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
+      propertyPath: onNodeComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1674129557}
+    - target: {fileID: 1930810448158217600, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
       propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930810448158217600, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisableActions
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930810448158217600, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
+      propertyPath: onNodeComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930810448158217600, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
+      propertyPath: onNodeComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnableActions
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930810448158217600, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InputContainer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930810448158217600, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
+      propertyPath: onNodeComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InputContainer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930810448158217600, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930810448158217600, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
+      propertyPath: onNodeComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4653613925114756396, guid: 33a485a80f4fc3649a5ccd2d7a26a747, type: 3}
       propertyPath: m_AnchorMax.y
