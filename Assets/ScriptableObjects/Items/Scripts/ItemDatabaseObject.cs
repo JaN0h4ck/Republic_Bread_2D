@@ -13,7 +13,7 @@ public class ItemDatabaseObject : ScriptableObject, ISerializationCallbackReceiv
         return ItemDatbase[_item];
     }
 
-    public ItemObject GetItem(int _id) {
+    public ItemObject GetItemObject(int _id) {
         foreach (var id in ItemDatbase) {
             if (id.Value == _id)
                 return id.Key;

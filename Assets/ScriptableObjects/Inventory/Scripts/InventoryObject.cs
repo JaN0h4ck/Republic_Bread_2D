@@ -4,6 +4,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEditor;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 [CreateAssetMenu(fileName = "New Inventory", menuName = "Inventory System/Inventory")]
 public class InventoryObject : ScriptableObject
@@ -27,6 +28,20 @@ public class InventoryObject : ScriptableObject
         InventorySlot temp = new InventorySlot(item2.ID, item2.Item, item2.amount);
         item2.UpdateSlot(item1.ID, item1.Item, item1.amount);
         item1.UpdateSlot(temp.ID, temp.Item, temp.amount);
+    }
+
+    public void CraftItem(InventorySlot item1, InventorySlot item2) {
+        ItemObject craftedItem = database.GetItemObject(database.GetItemObject(item2.Item.id).craftedInto.ID);
+        item2.UpdateSlot(craftedItem.ID, new Item(craftedItem), 1);
+        item1.UpdateSlot(-1, null, 0);
+    }
+
+    public void RemoveItem(Item _item) {
+        for (int i = 0; i < Container.Items.Length; i++) {
+            if (Container.Items[i].Item == _item) {
+                Container.Items[i].UpdateSlot(-1, null, 0);
+            }
+        }
     }
 
     public InventorySlot SetFirstEmptySlot(Item _item, int amount) {

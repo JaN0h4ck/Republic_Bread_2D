@@ -14,7 +14,6 @@ public class DisplayInventory : MonoBehaviour
     public GameObject inventoryPrefab;
     public InventoryObject inventory;
 
-    Color defaultSlotColor;
 
     [SerializeField]
     private TextMeshProUGUI itemDisplayText;
@@ -23,7 +22,6 @@ public class DisplayInventory : MonoBehaviour
 
     void Start() {
         CreateSlots();
-        defaultSlotColor = inventoryPrefab.GetComponent<Image>().color;
     }
 
     void Update() {
@@ -34,7 +32,7 @@ public class DisplayInventory : MonoBehaviour
         foreach (KeyValuePair<GameObject, InventorySlot> _slot in itemsDisplayed) {
             InventorySlotAdapter adapter = _slot.Key.GetComponent<InventorySlotAdapter>();
             if(_slot.Value.ID >= 0) {
-                adapter.SetItemImage(inventory.database.GetItem(_slot.Value.Item.id).uiDisplay);
+                adapter.SetItemImage(inventory.database.GetItemObject(_slot.Value.Item.id).uiDisplay);
                 adapter.SetItemImageColor(new Color(1, 1, 1, 1));
                 adapter.SetItemCountText(_slot.Value.amount == 1 ? "" : _slot.Value.amount.ToString("n0"));
             } else {
@@ -73,14 +71,17 @@ public class DisplayInventory : MonoBehaviour
 
     public void OnEnter(GameObject obj) {
         mouseItem.hoverObject = obj;
-        if(itemsDisplayed.ContainsKey(obj)) {
+
+        // Prevent trying to access an item that doesn't exist
+        if(itemsDisplayed.ContainsKey(obj) && itemsDisplayed[obj].ID >= 0) {
             mouseItem.hoverSlot = itemsDisplayed[obj];
             itemDisplayText.text = itemsDisplayed[obj].Item.name;
             int id = itemsDisplayed[obj].ID;
             if (mouseItem._object != null && id >= 0) {
-                ItemObject hoverItem = inventory.database.GetItem(id);
+                ItemObject hoverItem = inventory.database.GetItemObject(id);
                 if (hoverItem.type == ItemType.CraftingComponent && mouseItem.item.ID == hoverItem.requiredItem.ID) {
                     obj.GetComponent<InventorySlotAdapter>().SetBackgroundColor(Color.green);
+                    mouseItem.canCraft = true;
                 } else {
                     obj.GetComponent<InventorySlotAdapter>().SetBackgroundColor(Color.red);
                 }
@@ -91,7 +92,8 @@ public class DisplayInventory : MonoBehaviour
         mouseItem.hoverObject = null;
         mouseItem.hoverSlot = null;
         itemDisplayText.text = "";
-        obj.GetComponent<Image>().color = defaultSlotColor;
+        mouseItem.canCraft = false;
+        obj.GetComponent<InventorySlotAdapter>().resetBackgroundColor();
     }
     public void OnDragStart(GameObject obj) {
         var mouseObject = new GameObject();
@@ -100,7 +102,7 @@ public class DisplayInventory : MonoBehaviour
         mouseObject.transform.SetParent(transform.parent);
         if (itemsDisplayed[obj].ID >= 0) {
             var img = mouseObject.AddComponent<Image>();
-            img.sprite = inventory.database.GetItem(itemsDisplayed[obj].ID).uiDisplay;
+            img.sprite = inventory.database.GetItemObject(itemsDisplayed[obj].ID).uiDisplay;
             img.raycastTarget = false;
         }
 
@@ -109,9 +111,13 @@ public class DisplayInventory : MonoBehaviour
     }
     public void OnDragEnd(GameObject obj) {
         if(mouseItem.hoverObject) {
-            inventory.SwapItems(itemsDisplayed[obj], itemsDisplayed[mouseItem.hoverObject]);
+            if (mouseItem.canCraft) {
+                inventory.CraftItem(itemsDisplayed[obj], itemsDisplayed[mouseItem.hoverObject]);
+            } else {
+                inventory.SwapItems(itemsDisplayed[obj], itemsDisplayed[mouseItem.hoverObject]);
+            }
         } else {
-
+            //inventory.RemoveItem(itemsDisplayed[obj].Item);
         }
         Destroy(mouseItem._object);
         mouseItem.item = null;
@@ -129,4 +135,5 @@ public class MouseItem {
     public InventorySlot item;
     public InventorySlot hoverSlot;
     public GameObject hoverObject;
+    public bool canCraft = false;
 }
