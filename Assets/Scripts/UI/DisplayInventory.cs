@@ -32,16 +32,15 @@ public class DisplayInventory : MonoBehaviour
 
     public void UpdateSlots() {
         foreach (KeyValuePair<GameObject, InventorySlot> _slot in itemsDisplayed) {
+            InventorySlotAdapter adapter = _slot.Key.GetComponent<InventorySlotAdapter>();
             if(_slot.Value.ID >= 0) {
-                Image imageComponent = _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>();
-                imageComponent.sprite = inventory.database.GetItem(_slot.Value.Item.id).uiDisplay;
-                imageComponent.color = new Color(1, 1, 1, 1);
-                _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = _slot.Value.amount == 1 ? "" : _slot.Value.amount.ToString("n0");
+                adapter.SetItemImage(inventory.database.GetItem(_slot.Value.Item.id).uiDisplay);
+                adapter.SetItemImageColor(new Color(1, 1, 1, 1));
+                adapter.SetItemCountText(_slot.Value.amount == 1 ? "" : _slot.Value.amount.ToString("n0"));
             } else {
-                Image imageComponent = _slot.Key.transform.GetChild(0).GetComponentInChildren<Image>();
-                imageComponent.sprite = null;
-                imageComponent.color = new Color(1, 1, 1, 0);
-                _slot.Key.GetComponentInChildren<TextMeshProUGUI>().text = "";
+                adapter.ResetItemImage();
+                adapter.SetItemImageColor(new Color(1, 1, 1, 0));
+                adapter.SetItemCountText("");
             }
         }
     }
@@ -78,12 +77,12 @@ public class DisplayInventory : MonoBehaviour
             mouseItem.hoverSlot = itemsDisplayed[obj];
             itemDisplayText.text = itemsDisplayed[obj].Item.name;
             int id = itemsDisplayed[obj].ID;
-            if (mouseItem._object != null && id > 0) {
+            if (mouseItem._object != null && id >= 0) {
                 ItemObject hoverItem = inventory.database.GetItem(id);
                 if (hoverItem.type == ItemType.CraftingComponent && mouseItem.item.ID == hoverItem.requiredItem.ID) {
-                    obj.GetComponent<Image>().color = Color.green;
+                    obj.GetComponent<InventorySlotAdapter>().SetBackgroundColor(Color.green);
                 } else {
-                    obj.GetComponent<Image>().color = Color.red;
+                    obj.GetComponent<InventorySlotAdapter>().SetBackgroundColor(Color.red);
                 }
             }
         }
