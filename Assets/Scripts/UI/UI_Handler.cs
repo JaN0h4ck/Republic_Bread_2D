@@ -19,9 +19,8 @@ public class UI_Handler : MonoBehaviour
     }
 
     void Start() {
-        inputActions = Player.Instance.inputActions;
+        inputActions = InputContainer.Instance.inputActions;
         inputActions.UI.ToggleInventory.performed += ToggleInventory;
-        inputActions.UI.ToggleInventory.Enable();
     }
 
     private void ToggleInventory(InputAction.CallbackContext obj) {
