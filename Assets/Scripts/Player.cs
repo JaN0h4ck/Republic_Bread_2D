@@ -59,12 +59,11 @@ public class Player : Utils.Singleton<Player>
             GroundItem item;
             switch (hit.transform.tag) {
                 case "Walkable":
-                    Vector3 hitpoint = new Vector3(hit.point.x, 0, hit.point.z);
-                    agent.SetDestination(hitpoint);
+                    agent.SetDestination(new Vector3(hit.point.x, 0, hit.point.z));
                     break;
                 case "Item":
                     if (!CheckAgentInRange(hit)) {
-                        agent.SetDestination(new Vector3(hit.point.x, 0, hit.point.y));
+                        agent.SetDestination(new Vector3(hit.point.x, 0, hit.point.z));
                         StartCoroutine(WaitForAgentToReachItem(hit));
                     } else {
                         item = hit.transform.GetComponent<GroundItem>();
