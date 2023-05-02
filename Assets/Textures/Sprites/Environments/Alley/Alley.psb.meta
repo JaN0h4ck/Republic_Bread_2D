@@ -93,7 +93,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Ebene 50
+  - name: tuete_vordergrund
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -115,7 +115,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: -2077, y: 2031}
     spritePosition: {x: 2924, y: 0}
-  - name: Ebene 65
+  - name: box_vl
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -137,7 +137,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 413, y: 2704}
     spritePosition: {x: 434, y: 0}
-  - name: Ebene 54
+  - name: box_dunkel_hr
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -159,7 +159,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 466, y: 628}
     spritePosition: {x: 3387, y: 426}
-  - name: Ebene 56
+  - name: box_hell_hr
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -181,7 +181,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 328, y: 1135}
     spritePosition: {x: 3296, y: 202}
-  - name: Aus Auswahl
+  - name: fenster
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -203,7 +203,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 147, y: 1178}
     spritePosition: {x: 2825, y: 1029}
-  - name: Ebene 47
+  - name: regenrinne
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -225,7 +225,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 732, y: -279}
     spritePosition: {x: 3121, y: 283}
-  - name: Ebene 40
+  - name: grafitti
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -247,7 +247,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 1975, y: 1753}
     spritePosition: {x: 135, y: 278}
-  - name: Ebene 41
+  - name: toaster
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -269,7 +269,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 1365, y: 1285}
     spritePosition: {x: 178, y: 746}
-  - name: Ebene 36
+  - name: rot_links
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -291,7 +291,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 689, y: 1673}
     spritePosition: {x: 854, y: 823}
-  - name: Ebene 44
+  - name: brot
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -313,7 +313,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 95, y: 1788}
     spritePosition: {x: 752, y: 628}
-  - name: Ebene 24
+  - name: gelb
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -335,7 +335,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: -923, y: 1802}
     spritePosition: {x: 2747, y: 694}
-  - name: Ebene 22
+  - name: orange_mittig
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -357,7 +357,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 478, y: 1381}
     spritePosition: {x: 1946, y: 650}
-  - name: Ebene 26
+  - name: rot_rechts
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -379,7 +379,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 961, y: 477}
     spritePosition: {x: 2663, y: 602}
-  - name: Ebene 8
+  - name: box_dunkel_mitte
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -401,7 +401,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 920, y: 1740}
     spritePosition: {x: 2052, y: 291}
-  - name: Ebene 48
+  - name: zeiutugen_boden
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -423,7 +423,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: -824, y: 1693}
     spritePosition: {x: 828, y: 0}
-  - name: Aus Auswahl
+  - name: tuete_links
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -445,7 +445,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 2381, y: 1742}
     spritePosition: {x: 352, y: 289}
-  - name: Ebene 12
+  - name: tuete_mitte
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -467,7 +467,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 1253, y: 1909}
     spritePosition: {x: 1927, y: 298}
-  - name: Ebene 16
+  - name: crossaint
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -489,7 +489,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: -1827, y: 1498}
     spritePosition: {x: 1831, y: 533}
-  - name: Ebene 5
+  - name: leiter
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -511,7 +511,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 2121, y: -254}
     spritePosition: {x: 1503, y: 258}
-  - name: Ebene 4
+  - name: boden
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -533,7 +533,7 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 1337}
     spritePosition: {x: 0, y: 0}
-  - name: Ebene 3
+  - name: wand
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -640,18 +640,8 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Ebene 1
-    spriteName: 
-    isGroup: 0
-    parentIndex: -1
-    spriteID: cf2066bff5b8d9c4b986ccc336835a5d
-    layerID: 33
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 0
-  - name: Ebene 50
-    spriteName: Ebene 50
+  - name: tuete_vordergrund
+    spriteName: tuete_vordergrund
     isGroup: 0
     parentIndex: -1
     spriteID: 14097a0a7959c2a4b999ede1bbf68783
@@ -670,30 +660,40 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Ebene 65
-    spriteName: Ebene 65
+  - name: box_dunkel_mitte
+    spriteName: box_dunkel_mitte
     isGroup: 0
-    parentIndex: 2
+    parentIndex: 1
+    spriteID: 58919840f6cbe8049a3748ef0b54a2e2
+    layerID: 13
+    mosaicPosition: {x: 2972, y: 2031}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: box_vl
+    spriteName: box_vl
+    isGroup: 0
+    parentIndex: 1
     spriteID: b35f4fc30c89f5d428abb88ac0506551
     layerID: 30
     mosaicPosition: {x: 847, y: 2704}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ebene 54
-    spriteName: Ebene 54
+  - name: box_dunkel_hr
+    spriteName: box_dunkel_hr
     isGroup: 0
-    parentIndex: 2
+    parentIndex: 1
     spriteID: b4e7b936479a8bf44960b433118defbf
     layerID: 29
     mosaicPosition: {x: 3853, y: 1054}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ebene 56
-    spriteName: Ebene 56
+  - name: box_hell_hr
+    spriteName: box_hell_hr
     isGroup: 0
-    parentIndex: 2
+    parentIndex: 1
     spriteID: b7a4978d77365034996b77a6c5ac8d76
     layerID: 28
     mosaicPosition: {x: 3624, y: 1337}
@@ -710,8 +710,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Aus Auswahl
-    spriteName: Aus Auswahl
+  - name: fenster
+    spriteName: fenster
     isGroup: 0
     parentIndex: 6
     spriteID: 60025f8dc4587d44eb7e20949f97bf4d
@@ -720,8 +720,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ebene 47
-    spriteName: Ebene 47
+  - name: regenrinne
+    spriteName: regenrinne
     isGroup: 0
     parentIndex: 6
     spriteID: cdd3643adfd86304ab9b14d03d848d62
@@ -730,8 +730,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ebene 40
-    spriteName: Ebene 40
+  - name: grafitti
+    spriteName: grafitti
     isGroup: 0
     parentIndex: -1
     spriteID: 17d136df12b7e0d4a8593511d87d47c9
@@ -750,8 +750,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Ebene 41
-    spriteName: Ebene 41
+  - name: toaster
+    spriteName: toaster
     isGroup: 0
     parentIndex: 10
     spriteID: 6c8a2fb9e49e26244aebec8d29c07fd0
@@ -760,8 +760,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ebene 36
-    spriteName: Ebene 36
+  - name: rot_links
+    spriteName: rot_links
     isGroup: 0
     parentIndex: 10
     spriteID: b9b5a348930197849b7fff2a3d42ab0b
@@ -770,8 +770,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ebene 44
-    spriteName: Ebene 44
+  - name: brot
+    spriteName: brot
     isGroup: 0
     parentIndex: 10
     spriteID: 1a6a28b1d66be924f962c31df9488e44
@@ -780,8 +780,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ebene 24
-    spriteName: Ebene 24
+  - name: gelb
+    spriteName: gelb
     isGroup: 0
     parentIndex: 10
     spriteID: 376c1ebd49e474f4abd691085bfde672
@@ -790,8 +790,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ebene 22
-    spriteName: Ebene 22
+  - name: orange_mittig
+    spriteName: orange_mittig
     isGroup: 0
     parentIndex: 10
     spriteID: 6a68568a5817c844ba37ecc8ac389fa1
@@ -800,8 +800,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ebene 26
-    spriteName: Ebene 26
+  - name: rot_rechts
+    spriteName: rot_rechts
     isGroup: 0
     parentIndex: 10
     spriteID: 4aae2351434cb8c439a3fcba1f859c5c
@@ -810,18 +810,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ebene 8
-    spriteName: Ebene 8
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 58919840f6cbe8049a3748ef0b54a2e2
-    layerID: 13
-    mosaicPosition: {x: 2972, y: 2031}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: Ebene 48
-    spriteName: Ebene 48
+  - name: zeiutugen_boden
+    spriteName: zeiutugen_boden
     isGroup: 0
     parentIndex: -1
     spriteID: 3f351242a2d82b24f93971a452836bf9
@@ -830,7 +820,7 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: "t\xFCte"
+  - name: tuete
     spriteName: 
     isGroup: 1
     parentIndex: -1
@@ -840,28 +830,28 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Aus Auswahl
-    spriteName: Aus Auswahl
+  - name: tuete_links
+    spriteName: tuete_links
     isGroup: 0
-    parentIndex: 19
+    parentIndex: 18
     spriteID: 4bf49c81b0b891f479f952c48a4c6fa6
     layerID: 10
     mosaicPosition: {x: 2733, y: 2031}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ebene 12
-    spriteName: Ebene 12
+  - name: tuete_mitte
+    spriteName: tuete_mitte
     isGroup: 0
-    parentIndex: 19
+    parentIndex: 18
     spriteID: 24b0c10147d69e14bb3dd3fc295db263
     layerID: 9
     mosaicPosition: {x: 3180, y: 2207}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ebene 16
-    spriteName: Ebene 16
+  - name: crossaint
+    spriteName: crossaint
     isGroup: 0
     parentIndex: -1
     spriteID: 8271fa57ee052624381eb3769a89f3c2
@@ -870,8 +860,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ebene 5
-    spriteName: Ebene 5
+  - name: leiter
+    spriteName: leiter
     isGroup: 0
     parentIndex: -1
     spriteID: 6f19a128fffe13a418e1d4a9440083b6
@@ -890,20 +880,20 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Ebene 4
-    spriteName: Ebene 4
+  - name: boden
+    spriteName: boden
     isGroup: 0
-    parentIndex: 24
+    parentIndex: 23
     spriteID: 1af5ec4671af06643806fb3380d71e67
     layerID: 4
     mosaicPosition: {x: 4, y: 1337}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Ebene 3
-    spriteName: Ebene 3
+  - name: wand
+    spriteName: wand
     isGroup: 0
-    parentIndex: 24
+    parentIndex: 23
     spriteID: 88e817381a865594f87679485ccd16f9
     layerID: 3
     mosaicPosition: {x: 4, y: 4}

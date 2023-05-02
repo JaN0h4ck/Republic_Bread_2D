@@ -1,0 +1,730 @@
+fileFormatVersion: 2
+guid: efe08397469aa5d4c9dac3b7e9270bb5
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 256
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Teppich
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2565
+      y: 1583
+      width: 1240
+      height: 295
+    spriteID: 76909531bb474fb44bc321b05b3525af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1465, y: 1583}
+    spritePosition: {x: 1100, y: 0}
+  - name: Tuer
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3839
+      y: 635
+      width: 236
+      height: 765
+    spriteID: 8ae6387897f3dc44188cb9699373e82f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1522, y: 349}
+    spritePosition: {x: 2317, y: 286}
+  - name: Computer
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3634
+      y: 397
+      width: 240
+      height: 187
+    spriteID: 4d623bcecb3bd8a4abbe5c0c8ffc579c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3634, y: 397}
+    spritePosition: {x: 376, y: 399}
+  - name: Refal
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2565
+      y: 4
+      width: 610
+      height: 959
+    spriteID: 009e9b57857964148bc5625d4421d684
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 622, y: -472}
+    spritePosition: {x: 1943, y: 476}
+  - name: Fenster
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3183
+      y: 4
+      width: 443
+      height: 623
+    spriteID: 24fab73f5437d3a4785b948a33f4f454
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2669, y: -721}
+    spritePosition: {x: 514, y: 725}
+  - name: Papier
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3839
+      y: 1408
+      width: 247
+      height: 94
+    spriteID: 423cef8d666876a41b11de0c9a259845
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2325, y: 787}
+    spritePosition: {x: 1514, y: 621}
+  - name: pin_toast
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3888
+      y: 530
+      width: 76
+      height: 83
+    spriteID: 751a7b473a3c04d4cafffe5f10c1717a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2669, y: -495}
+    spritePosition: {x: 1219, y: 1025}
+  - name: pin_papiere
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2726
+      y: 971
+      width: 258
+      height: 146
+    spriteID: 1e11266263ad053419540140b6dda704
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1304, y: 0}
+    spritePosition: {x: 1422, y: 971}
+  - name: pin_crossaint
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3888
+      y: 397
+      width: 136
+      height: 125
+    spriteID: 35e89f39d4d1d0744b4a22d1e1ce19f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2756, y: -408}
+    spritePosition: {x: 1132, y: 805}
+  - name: pin_board
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3183
+      y: 635
+      width: 648
+      height: 369
+    spriteID: 5926acb0160856a4aae5176ddd11cae0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2059, y: -173}
+    spritePosition: {x: 1124, y: 808}
+  - name: stuhl
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2565
+      y: 971
+      width: 153
+      height: 286
+    spriteID: 401509580b39a2c4695b2e211715b2d1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1325, y: 538}
+    spritePosition: {x: 1240, y: 433}
+  - name: nebentisch
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3634
+      y: 4
+      width: 325
+      height: 385
+    spriteID: b6e6717a6d77d6b42af233945c775211
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2169, y: -347}
+    spritePosition: {x: 1465, y: 351}
+  - name: schrank
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2159
+      width: 268
+      height: 648
+    spriteID: 3209cee5183e2d44084d8aae49daf321
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -208, y: 1731}
+    spritePosition: {x: 212, y: 428}
+  - name: rollstuhl
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3813
+      y: 1583
+      width: 283
+      height: 472
+    spriteID: 846b9508ae199b342957363715c835fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3813, y: 1583}
+    spritePosition: {x: 506, y: 204}
+  - name: boden
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1583
+      width: 2553
+      height: 568
+    spriteID: a5fab0a7df607a144828ed2501f74d3c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 1583}
+    spritePosition: {x: 0, y: 0}
+  - name: wand
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2553
+      height: 1571
+    spriteID: 79b2c374832b76345b9cc26002c26424
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Windows Store Apps
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Teppich
+    spriteName: Teppich
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 76909531bb474fb44bc321b05b3525af
+    layerID: 22
+    mosaicPosition: {x: 2565, y: 1583}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tuer
+    spriteName: Tuer
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8ae6387897f3dc44188cb9699373e82f
+    layerID: 21
+    mosaicPosition: {x: 3839, y: 635}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Computer
+    spriteName: Computer
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4d623bcecb3bd8a4abbe5c0c8ffc579c
+    layerID: 20
+    mosaicPosition: {x: 3634, y: 397}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: schreibtisch
+    spriteName: schreibtisch
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0881b835ac7c933499215e26d7d4e749
+    layerID: 19
+    mosaicPosition: {x: 2565, y: 1583}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Refal
+    spriteName: Refal
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 009e9b57857964148bc5625d4421d684
+    layerID: 18
+    mosaicPosition: {x: 2565, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fenster
+    spriteName: Fenster
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 24fab73f5437d3a4785b948a33f4f454
+    layerID: 17
+    mosaicPosition: {x: 3183, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Papier
+    spriteName: Papier
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 423cef8d666876a41b11de0c9a259845
+    layerID: 16
+    mosaicPosition: {x: 3839, y: 1408}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: 'board '
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 724c82dc6fb6e0e4bafd66db3e480123
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: pin_toast
+    spriteName: pin_toast
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 751a7b473a3c04d4cafffe5f10c1717a
+    layerID: 14
+    mosaicPosition: {x: 3888, y: 530}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pin_papiere
+    spriteName: pin_papiere
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 1e11266263ad053419540140b6dda704
+    layerID: 13
+    mosaicPosition: {x: 2726, y: 971}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pin_crossaint
+    spriteName: pin_crossaint
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 35e89f39d4d1d0744b4a22d1e1ce19f1
+    layerID: 12
+    mosaicPosition: {x: 3888, y: 397}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pin_board
+    spriteName: pin_board
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 5926acb0160856a4aae5176ddd11cae0
+    layerID: 11
+    mosaicPosition: {x: 3183, y: 635}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: stuhl
+    spriteName: stuhl
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 401509580b39a2c4695b2e211715b2d1
+    layerID: 9
+    mosaicPosition: {x: 2565, y: 971}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: nebentisch
+    spriteName: nebentisch
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b6e6717a6d77d6b42af233945c775211
+    layerID: 8
+    mosaicPosition: {x: 3634, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: schrank
+    spriteName: schrank
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3209cee5183e2d44084d8aae49daf321
+    layerID: 7
+    mosaicPosition: {x: 4, y: 2159}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: rollstuhl
+    spriteName: rollstuhl
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 846b9508ae199b342957363715c835fe
+    layerID: 6
+    mosaicPosition: {x: 3813, y: 1583}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: bg
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 2e68f2ace20fd2e4196706d5d2d55792
+    layerID: 5
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: boden
+    spriteName: boden
+    isGroup: 0
+    parentIndex: 16
+    spriteID: a5fab0a7df607a144828ed2501f74d3c
+    layerID: 4
+    mosaicPosition: {x: 4, y: 1583}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: wand
+    spriteName: wand
+    isGroup: 0
+    parentIndex: 16
+    spriteID: 79b2c374832b76345b9cc26002c26424
+    layerID: 3
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
