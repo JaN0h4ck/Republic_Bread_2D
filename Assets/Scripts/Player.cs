@@ -166,7 +166,7 @@ public class Player : MonoBehaviour
     private void Update() {
         if (agent.velocity.magnitude > 0) {
             CalculateDirection();
-            switch(movementDirection) {
+            switch (movementDirection) {
                 case Directions.up:
                     spriteRenderer.sprite = sprites.up;
                     break;

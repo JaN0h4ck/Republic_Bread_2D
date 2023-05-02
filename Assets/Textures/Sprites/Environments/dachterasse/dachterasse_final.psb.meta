@@ -1,0 +1,1444 @@
+fileFormatVersion: 2
+guid: 330cebd7bf72a534398993952bd21712
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 256
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData:
+  - name: Leiter
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2775
+      y: 3920
+      width: 234
+      height: 300
+    spriteID: 8a3c19d4c5996e647a0c50c8d1a400ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1992, y: 3920}
+    spritePosition: {x: 783, y: 0}
+  - name: "Gel\xE4nder"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4318
+      width: 2763
+      height: 284
+    spriteID: 103a06215acdb544497fd9bdfee4b166
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4224}
+    spritePosition: {x: 0, y: 94}
+  - name: Blumenkasten
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3458
+      y: 2172
+      width: 498
+      height: 193
+    spriteID: 6e2226c8b98883848a5289893d8b371a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1193, y: 1655}
+    spritePosition: {x: 2265, y: 517}
+  - name: "Wandgem\xE4lde"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3437
+      y: 3920
+      width: 205
+      height: 168
+    spriteID: 87b9f3d2e2d8a834c8b31a264b049539
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3340, y: 3268}
+    spritePosition: {x: 97, y: 652}
+  - name: Brezel
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3964
+      y: 2393
+      width: 88
+      height: 65
+    spriteID: 64bf774c2545b1f44ab6670f3fc48ae9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2522, y: 1721}
+    spritePosition: {x: 1442, y: 672}
+  - name: Lampe_links
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3437
+      y: 4096
+      width: 113
+      height: 213
+    spriteID: 1486fe542b093584ca669f59fd38e782
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2253, y: 3126}
+    spritePosition: {x: 1184, y: 970}
+  - name: Lampe_rechts
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3964
+      y: 2172
+      width: 113
+      height: 213
+    spriteID: 6c543e65d2e63204fbcbb3a707090fc5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2268, y: 1135}
+    spritePosition: {x: 1696, y: 1037}
+  - name: Coloring_Efeu
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3374
+      width: 2763
+      height: 538
+    spriteID: 37bbcce41f1eaa14fb6fe1411d1763bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 2341}
+    spritePosition: {x: 0, y: 1033}
+  - name: Shading_Efeu
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2172
+      width: 2763
+      height: 549
+    spriteID: c68c8faf3b6d69a4cb5065d224113c84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 1150}
+    spritePosition: {x: 0, y: 1022}
+  - name: Bonsai
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2775
+      y: 2172
+      width: 321
+      height: 543
+    spriteID: 0080cdb48f4ccea4a88613a18194a924
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2170, y: 1669}
+    spritePosition: {x: 605, y: 503}
+  - name: Topfplanze_Rechts
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3017
+      y: 3920
+      width: 202
+      height: 307
+    spriteID: eef86240c3036c3469f80aaee086a2ad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1111, y: 3384}
+    spritePosition: {x: 1906, y: 536}
+  - name: Topfplanze_Links
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3227
+      y: 3920
+      width: 202
+      height: 307
+    spriteID: 0c391222f1692c2439098bf1609fb3e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2335, y: 3391}
+    spritePosition: {x: 892, y: 529}
+  - name: Fenster
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2729
+      width: 2372
+      height: 637
+    spriteID: 826926dc9328e514da199aea99402cc2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -189, y: 1842}
+    spritePosition: {x: 193, y: 887}
+  - name: Bank_rechts
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3650
+      y: 3920
+      width: 134
+      height: 219
+    spriteID: c374ae8b4b20dd14b94b8eb494c78863
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1954, y: 3445}
+    spritePosition: {x: 1696, y: 475}
+  - name: Bank_Links
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3792
+      y: 3920
+      width: 103
+      height: 230
+    spriteID: 10ee2ec7ce34afa40bccb4b8014dc708
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2604, y: 3453}
+    spritePosition: {x: 1188, y: 467}
+  - name: Tisch
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3104
+      y: 2172
+      width: 346
+      height: 337
+    spriteID: df7b131ad8061aa408c4b85ce104edcf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1767, y: 1715}
+    spritePosition: {x: 1337, y: 457}
+  - name: Kante
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3920
+      width: 2763
+      height: 390
+    spriteID: c6de8b725a6c7f44b87d5f5a9354f9ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 3920}
+    spritePosition: {x: 0, y: 0}
+  - name: Boden
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1583
+      width: 2763
+      height: 581
+    spriteID: efa65385d8d49c641b986ccbc6726c01
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 1583}
+    spritePosition: {x: 0, y: 0}
+  - name: Wand
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2763
+      height: 1571
+    spriteID: 75830fbf40541a24fabe2fd91d47c092
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  rigSpriteImportData:
+  - name: Leiter
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2775
+      y: 3920
+      width: 234
+      height: 300
+    spriteID: 1baa4d292dd2e6d4d847f002e48e4e5e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1992, y: 3920}
+    spritePosition: {x: 783, y: 0}
+  - name: "Gel\xE4nder"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4318
+      width: 2763
+      height: 284
+    spriteID: ccb984172c3acfd47ab915618c78add8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4224}
+    spritePosition: {x: 0, y: 94}
+  - name: Blumenkasten
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3458
+      y: 2172
+      width: 498
+      height: 193
+    spriteID: efdbf103c44516441a0e497b047a17c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1193, y: 1655}
+    spritePosition: {x: 2265, y: 517}
+  - name: "Wandgem\xE4lde"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3437
+      y: 3920
+      width: 205
+      height: 168
+    spriteID: 366489b7360d18b47acff83d0e10896d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3340, y: 3268}
+    spritePosition: {x: 97, y: 652}
+  - name: Brezel
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3964
+      y: 2393
+      width: 88
+      height: 65
+    spriteID: dc3d35575669f5047a36b5880af51c27
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2522, y: 1721}
+    spritePosition: {x: 1442, y: 672}
+  - name: Lampe_links
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3437
+      y: 4096
+      width: 113
+      height: 213
+    spriteID: 3a0e1847cefad444a8e4688a4a4c8098
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2253, y: 3126}
+    spritePosition: {x: 1184, y: 970}
+  - name: Lampe_rechts
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3964
+      y: 2172
+      width: 113
+      height: 213
+    spriteID: 1af45500279cbde4fba958cd4d915174
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2268, y: 1135}
+    spritePosition: {x: 1696, y: 1037}
+  - name: Coloring_Efeu
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3374
+      width: 2763
+      height: 538
+    spriteID: b04a024cbe0609b4da33d0900c49ab4b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 2341}
+    spritePosition: {x: 0, y: 1033}
+  - name: Shading_Efeu
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2172
+      width: 2763
+      height: 549
+    spriteID: 92b0e3f992a33bb4f8874e2d01ccf503
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 1150}
+    spritePosition: {x: 0, y: 1022}
+  - name: Bonsai
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2775
+      y: 2172
+      width: 321
+      height: 543
+    spriteID: 143227993af5ec14db2d18860f61f9c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2170, y: 1669}
+    spritePosition: {x: 605, y: 503}
+  - name: Topfplanze_Rechts
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3017
+      y: 3920
+      width: 202
+      height: 307
+    spriteID: 4acf2998d5d28844f9feeece971c2b2b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1111, y: 3384}
+    spritePosition: {x: 1906, y: 536}
+  - name: Topfplanze_Links
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3227
+      y: 3920
+      width: 202
+      height: 307
+    spriteID: ff2f27cbacd611345be085067d5cf2df
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2335, y: 3391}
+    spritePosition: {x: 892, y: 529}
+  - name: Fenster
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2729
+      width: 2372
+      height: 637
+    spriteID: 5c2e29f985eca3c49ad0ca89ab786943
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -189, y: 1842}
+    spritePosition: {x: 193, y: 887}
+  - name: Bank_rechts
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3650
+      y: 3920
+      width: 134
+      height: 219
+    spriteID: 6c2b6df08b7658a45a5c75c1e7105b50
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1954, y: 3445}
+    spritePosition: {x: 1696, y: 475}
+  - name: Bank_Links
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3792
+      y: 3920
+      width: 103
+      height: 230
+    spriteID: b55caa9a3d3355743960bcb4723985e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2604, y: 3453}
+    spritePosition: {x: 1188, y: 467}
+  - name: Tisch
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3104
+      y: 2172
+      width: 346
+      height: 337
+    spriteID: 03f0a780c83cff748a17f4cace1e4deb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1767, y: 1715}
+    spritePosition: {x: 1337, y: 457}
+  - name: Kante
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3920
+      width: 2763
+      height: 390
+    spriteID: 3702aed46bdf4784cb610a7852df544e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 3920}
+    spritePosition: {x: 0, y: 0}
+  - name: Boden
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1583
+      width: 2763
+      height: 581
+    spriteID: edf1f93a598a56a458f6b9570de862f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 1583}
+    spritePosition: {x: 0, y: 0}
+  - name: Wand
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2763
+      height: 1571
+    spriteID: f4dca580b208e03409c4cc8f047a92e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Windows Store Apps
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers:
+  - name: Leiter
+    spriteName: Leiter
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8a3c19d4c5996e647a0c50c8d1a400ea
+    layerID: 24
+    mosaicPosition: {x: 2775, y: 3920}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "Gel\xE4nder"
+    spriteName: "Gel\xE4nder"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 103a06215acdb544497fd9bdfee4b166
+    layerID: 23
+    mosaicPosition: {x: 4, y: 4318}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Blumenkasten
+    spriteName: Blumenkasten
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6e2226c8b98883848a5289893d8b371a
+    layerID: 22
+    mosaicPosition: {x: 3458, y: 2172}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "Wandgem\xE4lde"
+    spriteName: "Wandgem\xE4lde"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 87b9f3d2e2d8a834c8b31a264b049539
+    layerID: 21
+    mosaicPosition: {x: 3437, y: 3920}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Brezel
+    spriteName: Brezel
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 64bf774c2545b1f44ab6670f3fc48ae9
+    layerID: 20
+    mosaicPosition: {x: 3964, y: 2393}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Lampe_links
+    spriteName: Lampe_links
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1486fe542b093584ca669f59fd38e782
+    layerID: 19
+    mosaicPosition: {x: 3437, y: 4096}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Lampe_rechts
+    spriteName: Lampe_rechts
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6c543e65d2e63204fbcbb3a707090fc5
+    layerID: 18
+    mosaicPosition: {x: 3964, y: 2172}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Coloring_Efeu
+    spriteName: Coloring_Efeu
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 37bbcce41f1eaa14fb6fe1411d1763bd
+    layerID: 17
+    mosaicPosition: {x: 4, y: 3374}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Shading_Efeu
+    spriteName: Shading_Efeu
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c68c8faf3b6d69a4cb5065d224113c84
+    layerID: 16
+    mosaicPosition: {x: 4, y: 2172}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: plants
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 4a0dd2e75ca94c148b124cf04fb73d0b
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Bonsai
+    spriteName: Bonsai
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 0080cdb48f4ccea4a88613a18194a924
+    layerID: 14
+    mosaicPosition: {x: 2775, y: 2172}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Topfplanze_Rechts
+    spriteName: Topfplanze_Rechts
+    isGroup: 0
+    parentIndex: 9
+    spriteID: eef86240c3036c3469f80aaee086a2ad
+    layerID: 13
+    mosaicPosition: {x: 3017, y: 3920}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Topfplanze_Links
+    spriteName: Topfplanze_Links
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 0c391222f1692c2439098bf1609fb3e9
+    layerID: 12
+    mosaicPosition: {x: 3227, y: 3920}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fenster
+    spriteName: Fenster
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 826926dc9328e514da199aea99402cc2
+    layerID: 10
+    mosaicPosition: {x: 4, y: 2729}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: tisch set
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: f392fda52f19f2a4dabd6544f157f6cc
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Bank_rechts
+    spriteName: Bank_rechts
+    isGroup: 0
+    parentIndex: 14
+    spriteID: c374ae8b4b20dd14b94b8eb494c78863
+    layerID: 8
+    mosaicPosition: {x: 3650, y: 3920}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Bank_Links
+    spriteName: Bank_Links
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 10ee2ec7ce34afa40bccb4b8014dc708
+    layerID: 7
+    mosaicPosition: {x: 3792, y: 3920}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tisch
+    spriteName: Tisch
+    isGroup: 0
+    parentIndex: 14
+    spriteID: df7b131ad8061aa408c4b85ce104edcf
+    layerID: 6
+    mosaicPosition: {x: 3104, y: 2172}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Kante
+    spriteName: Kante
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c6de8b725a6c7f44b87d5f5a9354f9ae
+    layerID: 4
+    mosaicPosition: {x: 4, y: 3920}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Boden
+    spriteName: Boden
+    isGroup: 0
+    parentIndex: -1
+    spriteID: efa65385d8d49c641b986ccbc6726c01
+    layerID: 3
+    mosaicPosition: {x: 4, y: 1583}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Wand
+    spriteName: Wand
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 75830fbf40541a24fabe2fd91d47c092
+    layerID: 2
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  rigPSDLayers:
+  - name: Leiter
+    spriteName: Leiter
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1baa4d292dd2e6d4d847f002e48e4e5e
+    layerID: 24
+    mosaicPosition: {x: 2775, y: 3920}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "Gel\xE4nder"
+    spriteName: "Gel\xE4nder"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ccb984172c3acfd47ab915618c78add8
+    layerID: 23
+    mosaicPosition: {x: 4, y: 4318}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Blumenkasten
+    spriteName: Blumenkasten
+    isGroup: 0
+    parentIndex: -1
+    spriteID: efdbf103c44516441a0e497b047a17c8
+    layerID: 22
+    mosaicPosition: {x: 3458, y: 2172}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "Wandgem\xE4lde"
+    spriteName: "Wandgem\xE4lde"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 366489b7360d18b47acff83d0e10896d
+    layerID: 21
+    mosaicPosition: {x: 3437, y: 3920}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Brezel
+    spriteName: Brezel
+    isGroup: 0
+    parentIndex: -1
+    spriteID: dc3d35575669f5047a36b5880af51c27
+    layerID: 20
+    mosaicPosition: {x: 3964, y: 2393}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Lampe_links
+    spriteName: Lampe_links
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3a0e1847cefad444a8e4688a4a4c8098
+    layerID: 19
+    mosaicPosition: {x: 3437, y: 4096}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Lampe_rechts
+    spriteName: Lampe_rechts
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1af45500279cbde4fba958cd4d915174
+    layerID: 18
+    mosaicPosition: {x: 3964, y: 2172}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Coloring_Efeu
+    spriteName: Coloring_Efeu
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b04a024cbe0609b4da33d0900c49ab4b
+    layerID: 17
+    mosaicPosition: {x: 4, y: 3374}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Shading_Efeu
+    spriteName: Shading_Efeu
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 92b0e3f992a33bb4f8874e2d01ccf503
+    layerID: 16
+    mosaicPosition: {x: 4, y: 2172}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: plants
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 0e9d0af7c8d60be41bbeb918514dd8c0
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Bonsai
+    spriteName: Bonsai
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 143227993af5ec14db2d18860f61f9c7
+    layerID: 14
+    mosaicPosition: {x: 2775, y: 2172}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Topfplanze_Rechts
+    spriteName: Topfplanze_Rechts
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 4acf2998d5d28844f9feeece971c2b2b
+    layerID: 13
+    mosaicPosition: {x: 3017, y: 3920}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Topfplanze_Links
+    spriteName: Topfplanze_Links
+    isGroup: 0
+    parentIndex: 9
+    spriteID: ff2f27cbacd611345be085067d5cf2df
+    layerID: 12
+    mosaicPosition: {x: 3227, y: 3920}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fenster
+    spriteName: Fenster
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5c2e29f985eca3c49ad0ca89ab786943
+    layerID: 10
+    mosaicPosition: {x: 4, y: 2729}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: tisch set
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: ce3e5d8cd05d97e41a4fca44f7087065
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Bank_rechts
+    spriteName: Bank_rechts
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 6c2b6df08b7658a45a5c75c1e7105b50
+    layerID: 8
+    mosaicPosition: {x: 3650, y: 3920}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Bank_Links
+    spriteName: Bank_Links
+    isGroup: 0
+    parentIndex: 14
+    spriteID: b55caa9a3d3355743960bcb4723985e7
+    layerID: 7
+    mosaicPosition: {x: 3792, y: 3920}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tisch
+    spriteName: Tisch
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 03f0a780c83cff748a17f4cace1e4deb
+    layerID: 6
+    mosaicPosition: {x: 3104, y: 2172}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Kante
+    spriteName: Kante
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3702aed46bdf4784cb610a7852df544e
+    layerID: 4
+    mosaicPosition: {x: 4, y: 3920}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Boden
+    spriteName: Boden
+    isGroup: 0
+    parentIndex: -1
+    spriteID: edf1f93a598a56a458f6b9570de862f5
+    layerID: 3
+    mosaicPosition: {x: 4, y: 1583}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Wand
+    spriteName: Wand
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f4dca580b208e03409c4cc8f047a92e6
+    layerID: 2
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
