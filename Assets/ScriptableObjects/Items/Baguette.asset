@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918cabe312027df44b1730481fd4e119, type: 3}
+  m_Name: Baguette
+  m_EditorClassIdentifier: 
+  ID: 0
+  uiDisplay: {fileID: 21300000, guid: d76105c9e21db6643ad4cea5a674a3dc, type: 3}
+  type: 3
+  description: 
+  craftedInto: {fileID: 11400000, guid: 4e0e6f6922c88ff4bb5af3f3315cc04c, type: 2}
+  requiredItem: {fileID: 11400000, guid: 7ca99cef7559385408f532af46390354, type: 2}
+  isCraftable: 1

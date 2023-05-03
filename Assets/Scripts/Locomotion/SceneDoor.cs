@@ -3,10 +3,15 @@ using UnityEngine.AI;
 using Yarn.Unity;
 
 public class SceneDoor : MonoBehaviour {
-    public GameObject m_connectedDoor;
 
     private Camera m_SceneCamera;
+
+    [SerializeField]
     private SceneDoor m_connectedSceneDoor;
+
+    public SceneDoor ConnectedSceneDoor {
+        get { return m_connectedSceneDoor; }
+    }
 
     //Wird benötigt um Yarn Variablen aus dem Storage zu lesen.
     private InMemoryVariableStorage m_variableStorage;
@@ -48,7 +53,15 @@ public class SceneDoor : MonoBehaviour {
     [Tooltip("Name des Yarn Nodes für den inspect")]
     private string m_inspectName;
 
+    public string InspectName {
+        get { return m_inspectName; }
+    }
+
     private bool m_hasInspect = false;
+
+    public bool HasInspect {
+        get { return m_hasInspect; }
+    }
 
     private void Start() {
         //Sanity Check
@@ -71,8 +84,6 @@ public class SceneDoor : MonoBehaviour {
 
         m_variableStorage = FindObjectOfType<InMemoryVariableStorage>();
 
-        if (m_connectedDoor)
-            m_connectedSceneDoor = m_connectedDoor.GetComponent<SceneDoor>();
 
         m_SceneCamera = FindSceneCamera(gameObject.transform.parent);
 
@@ -85,15 +96,8 @@ public class SceneDoor : MonoBehaviour {
         m_DialogueEmpty = string.IsNullOrEmpty(m_DialogueName);
     }
 
-    // TODO: ummünzuen auf neues Input
-    //private void OnMouseOver() {
-    //    if (Input.GetMouseButtonDown(1) && m_hasInspect && !m_DialogueRunner.IsDialogueRunning) {
-    //        GameObject.Find("brotagonist").GetComponent<NavMeshAgent>().ResetPath();
-    //        m_DialogueRunner.StartDialogue(m_inspectName);
-    //    }
-    //}
 
-    public void LocationChangeCurrent(NavMeshAgent agent) {
+    public virtual void LocationChangeCurrent(NavMeshAgent agent) {
         if (!m_blockDoorByDefault) {
             ChangeCurrent(agent);
         } else {

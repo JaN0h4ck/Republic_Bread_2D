@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
+using Yarn.Unity;
 
 public class Player : MonoBehaviour {
     private Unified_Input inputActions;
@@ -23,6 +24,8 @@ public class Player : MonoBehaviour {
         get { return movementDirection; }
     }
 
+    private DialogueRunner dialogueRunner;
+
     private NavMeshAgent agent;
 
     private SpriteRenderer spriteRenderer;
@@ -42,6 +45,11 @@ public class Player : MonoBehaviour {
 
     private void Start() {
         inputActions = InputContainer.Instance.inputActions;
+
+        dialogueRunner = GameObject.Find("Dialogue System").GetComponent<DialogueRunner>();
+        if(!dialogueRunner) {
+            Debug.LogWarning("No Dialogue Runner Found!");
+        }
 
         inputActions.Player.Interact.performed += _ => OnClickLeft();
         inputActions.Player.Inspect.performed += _ => OnClickRight();
@@ -83,28 +91,6 @@ public class Player : MonoBehaviour {
         }
     }
 
-    private IEnumerator WaitForAgentToReachSceneDoor(RaycastHit hit) {
-        yield return new WaitForEndOfFrame();
-        SceneDoor door = hit.transform.GetComponent<SceneDoor>();
-        while (!CheckAgentInRange(hit)) {
-            yield return new WaitForEndOfFrame();
-        }
-        door.LocationChangeCurrent(agent);
-    }
-
-    private IEnumerator WaitForAgentToReachItem(RaycastHit hit) {
-        yield return new WaitForEndOfFrame();
-        while (!CheckAgentInRange(hit)) {
-            yield return new WaitForEndOfFrame();
-        }
-        GroundItem item = hit.transform.GetComponent<GroundItem>();
-        if (item) {
-            inventory.AddItem(new Item(item.item), 1);
-            Destroy(hit.transform.gameObject);
-        } else {
-            Debug.Log("No Item");
-        }
-    }
 
     public void OnClickRight() {
         if (CalculateRaycast(Pointer.current.position, out RaycastHit hit)) {
@@ -117,6 +103,12 @@ public class Player : MonoBehaviour {
                         break;
                     default:
                         Debug.Log("No Tag");
+                        break;
+                    case "SceneDoor":
+                        SceneDoor door = hit.transform.GetComponent<SceneDoor>();
+                        if(door.HasInspect) {
+                            dialogueRunner.StartDialogue(door.InspectName);
+                        }
                         break;
                 }
             }
@@ -132,6 +124,30 @@ public class Player : MonoBehaviour {
 
     public void OnLoad() {
         inventory.Load();
+    }
+
+    private IEnumerator WaitForAgentToReachSceneDoor(RaycastHit hit) {
+        yield return new WaitForEndOfFrame();
+        SceneDoor door = hit.transform.GetComponent<SceneDoor>();
+        while (!CheckAgentInRange(hit)) {
+            yield return new WaitForEndOfFrame();
+        }
+        door.LocationChangeCurrent(agent);
+    }
+
+
+    private IEnumerator WaitForAgentToReachItem(RaycastHit hit) {
+        yield return new WaitForEndOfFrame();
+        while (!CheckAgentInRange(hit)) {
+            yield return new WaitForEndOfFrame();
+        }
+        GroundItem item = hit.transform.GetComponent<GroundItem>();
+        if (item) {
+            inventory.AddItem(new Item(item.item), 1);
+            Destroy(hit.transform.gameObject);
+        } else {
+            Debug.Log("No Item");
+        }
     }
 
     private bool CheckAgentInRange(RaycastHit hit) {
