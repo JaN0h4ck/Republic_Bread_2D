@@ -2,14 +2,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Item Database", menuName = "Inventory System/Items/Database")]
-public class ItemDatabaseObject : ScriptableObject, ISerializationCallbackReceiver
-{
+public class ItemDatabaseObject : ScriptableObject, ISerializationCallbackReceiver {
     [SerializeField]
     private ItemObject[] items;
     private Dictionary<ItemObject, int> ItemDatbase = new();
 
 
-    public int GetID(ItemObject _item) { 
+    public int GetID(ItemObject _item) {
         return ItemDatbase[_item];
     }
 

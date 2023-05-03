@@ -1,14 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
+using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class DisplayInventory : MonoBehaviour
-{
+public class DisplayInventory : MonoBehaviour {
     private MouseItem mouseItem = new MouseItem();
 
     public GameObject inventoryPrefab;
@@ -33,7 +30,7 @@ public class DisplayInventory : MonoBehaviour
     private void UpdateSlots() {
         foreach (KeyValuePair<GameObject, InventorySlot> _slot in itemsDisplayed) {
             InventorySlotAdapter adapter = _slot.Key.GetComponent<InventorySlotAdapter>();
-            if(_slot.Value.ID >= 0) {
+            if (_slot.Value.ID >= 0) {
                 adapter.SetItemImage(inventory.database.GetItemObject(_slot.Value.Item.id).uiDisplay);
                 adapter.SetItemImageColor(new Color(1, 1, 1, 1));
                 adapter.SetItemCountText(_slot.Value.amount == 1 ? "" : _slot.Value.amount.ToString("n0"));
@@ -76,7 +73,7 @@ public class DisplayInventory : MonoBehaviour
         mouseItem.hoverObject = obj;
 
         // Prevent trying to access an item that doesn't exist
-        if(itemsDisplayed.ContainsKey(obj) && itemsDisplayed[obj].ID >= 0) {
+        if (itemsDisplayed.ContainsKey(obj) && itemsDisplayed[obj].ID >= 0) {
             mouseItem.hoverSlot = itemsDisplayed[obj];
             itemDisplayText.text = itemsDisplayed[obj].Item.name;
             int id = itemsDisplayed[obj].ID;
@@ -114,7 +111,7 @@ public class DisplayInventory : MonoBehaviour
         mouseItem.item = itemsDisplayed[obj];
     }
     private void OnDragEnd(GameObject obj) {
-        if(mouseItem.hoverObject) {
+        if (mouseItem.hoverObject) {
             if (mouseItem.canCraft) {
                 inventory.CraftItem(itemsDisplayed[obj], itemsDisplayed[mouseItem.hoverObject]);
             } else {
@@ -127,7 +124,7 @@ public class DisplayInventory : MonoBehaviour
         mouseItem.item = null;
     }
     private void OnDragging(GameObject obj) {
-        if(mouseItem._object != null) {
+        if (mouseItem._object != null) {
             mouseItem._object.GetComponent<RectTransform>().position = Input.mousePosition;
         }
     }

@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class InputContainer : Utils.Singleton<InputContainer>
-{
+public class InputContainer : Utils.Singleton<InputContainer> {
     public Unified_Input inputActions;
 
     private void Awake() {

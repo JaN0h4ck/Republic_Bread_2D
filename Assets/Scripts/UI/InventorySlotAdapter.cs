@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-public class InventorySlotAdapter : MonoBehaviour
-{
+public class InventorySlotAdapter : MonoBehaviour {
     private Image backgroundImage;
     private TextMeshProUGUI itemCountText;
 

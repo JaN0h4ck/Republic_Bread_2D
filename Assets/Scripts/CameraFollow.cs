@@ -1,12 +1,8 @@
-using System.Net.Sockets;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 
 [RequireComponent(typeof(Transform))]
-public class CameraFollow : MonoBehaviour
-{
+public class CameraFollow : MonoBehaviour {
     [SerializeField]
     private Transform target;
     private NavMeshAgent agent;
@@ -31,15 +27,14 @@ public class CameraFollow : MonoBehaviour
     private Vector3 m_LastPos;
 
 
-    void Start()
-    {
+    void Start() {
         agent = target.GetComponent<NavMeshAgent>();
         m_CameraOffset = new Vector3(CameraOffsetX, CameraOffsetY, CameraOffsetZ);
         m_LastPos = transform.position;
         m_CameraOffset.x = CameraOffsetX;
         m_CameraOffset.y = CameraOffsetY;
         m_CameraOffset.z = CameraOffsetZ;
-        //transform.position = target.position + m_CameraOffset;
+        transform.position = new Vector3(target.position.x + m_CameraOffset.x, transform.position.y, transform.position.z);
     }
 
     private void LateUpdate() {
@@ -74,8 +69,7 @@ public class CameraFollow : MonoBehaviour
         return false;
     }
 
-    public void ResetCamera()
-    {
+    public void ResetCamera() {
         transform.position = target.position + m_CameraOffset;
     }
 }

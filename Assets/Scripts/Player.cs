@@ -1,13 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
-using UnityEngine.AI;
-using System;
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour {
     private Unified_Input inputActions;
     public enum Directions {
         up = 0x01, // 0001
@@ -22,8 +19,8 @@ public class Player : MonoBehaviour
 
     private Directions movementDirection = 0x00;
 
-    public Directions playerDirection { 
-        get { return movementDirection; } 
+    public Directions playerDirection {
+        get { return movementDirection; }
     }
 
     private NavMeshAgent agent;
@@ -54,7 +51,7 @@ public class Player : MonoBehaviour
 
     public void OnClickLeft() {
         StopAllCoroutines();
-        if (CalculateRaycast(Pointer.current.position,out RaycastHit hit)) {
+        if (CalculateRaycast(Pointer.current.position, out RaycastHit hit)) {
             GroundItem item;
             switch (hit.transform.tag) {
                 case "Walkable":
@@ -75,7 +72,7 @@ public class Player : MonoBehaviour
                     }
                     break;
             }
-            
+
         } else {
             Debug.Log("No Hit");
         }
@@ -97,10 +94,10 @@ public class Player : MonoBehaviour
 
     public void OnClickRight() {
         if (CalculateRaycast(Pointer.current.position, out RaycastHit hit)) {
-            if(!CheckAgentInRange(hit))
+            if (!CheckAgentInRange(hit))
                 agent.SetDestination(new Vector3(hit.point.x, 0, hit.point.y));
             else {
-                switch(hit.transform.tag) {
+                switch (hit.transform.tag) {
                     case "Interactable":
                         Debug.Log("Interactable");
                         break;
@@ -131,7 +128,7 @@ public class Player : MonoBehaviour
             return true;
     }
 
-    private bool CalculateRaycast(Vector2Control pointerPosition,out RaycastHit hit) {
+    private bool CalculateRaycast(Vector2Control pointerPosition, out RaycastHit hit) {
         Ray ray = Camera.main.ScreenPointToRay(pointerPosition.value);
         return Physics.Raycast(ray, out hit, Mathf.Infinity);
     }
@@ -145,7 +142,7 @@ public class Player : MonoBehaviour
         Vector3 agentDirection = lastPos - currentPos;
         lastPos = currentPos;
         agentDirection.Normalize();
-        switch(agentDirection.z) {
+        switch (agentDirection.z) {
             case <= -.5f: // up
                 movementDirection += 0x01;
                 break;
@@ -153,7 +150,7 @@ public class Player : MonoBehaviour
                 movementDirection += 0x02;
                 break;
         }
-        switch(agentDirection.x) {
+        switch (agentDirection.x) {
             case >= .5f: // left
                 movementDirection += 0x04;
                 break;

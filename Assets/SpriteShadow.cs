@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Material))]
-public class SpriteShadow : MonoBehaviour, ISerializationCallbackReceiver
-{
+public class SpriteShadow : MonoBehaviour, ISerializationCallbackReceiver {
     [SerializeField]
     private Material m_shadowMaterial;
 
