@@ -18,6 +18,9 @@ public class Player : MonoBehaviour {
         downleft = 0x06 // 0110
     }
 
+    [SerializeField]
+    private CursorTextureObject cursorTextures;
+
     private Directions movementDirection = 0x00;
 
     public Directions playerDirection {
@@ -72,8 +75,7 @@ public class Player : MonoBehaviour {
                     } else {
                         item = hit.transform.GetComponent<GroundItem>();
                         if (item) {
-                            inventory.AddItem(new Item(item.item), 1);
-                            Destroy(hit.transform.gameObject);
+                            PickupItem(item, hit);
                         } else {
                             Debug.Log("No Item");
                         }
@@ -126,6 +128,14 @@ public class Player : MonoBehaviour {
         inventory.Load();
     }
 
+    private void PickupItem(GroundItem item, RaycastHit hit) {
+        inventory.AddItem(new Item(item.item), 1);
+        if (item.HasDialogue)
+            dialogueRunner.StartDialogue(item.DialogueNode);
+        Destroy(hit.transform.gameObject);
+        Cursor.SetCursor(cursorTextures.DefaultCursor, cursorTextures.Hotspot, CursorMode.Auto);
+    }
+    
     private IEnumerator WaitForAgentToReachSceneDoor(RaycastHit hit) {
         yield return new WaitForEndOfFrame();
         SceneDoor door = hit.transform.GetComponent<SceneDoor>();
@@ -138,21 +148,20 @@ public class Player : MonoBehaviour {
 
     private IEnumerator WaitForAgentToReachItem(RaycastHit hit) {
         yield return new WaitForEndOfFrame();
-        while (!CheckAgentInRange(hit)) {
+        while (!CheckAgentInRange(hit, .45f)) {
             yield return new WaitForEndOfFrame();
         }
         GroundItem item = hit.transform.GetComponent<GroundItem>();
         if (item) {
-            inventory.AddItem(new Item(item.item), 1);
-            Destroy(hit.transform.gameObject);
+            PickupItem(item, hit);
         } else {
             Debug.Log("No Item");
         }
     }
 
-    private bool CheckAgentInRange(RaycastHit hit) {
+    private bool CheckAgentInRange(RaycastHit hit, float offset = 0.5f) {
         Vector3 distance = transform.position - hit.point;
-        if (distance.magnitude >= (agent.stoppingDistance + .5f))
+        if (distance.magnitude >= (agent.stoppingDistance + offset))
             return false;
         else
             return true;

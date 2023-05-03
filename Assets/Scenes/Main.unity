@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -224,6 +224,10 @@ PrefabInstance:
       propertyPath: spriteArray
       value: 
       objectReference: {fileID: 11400000, guid: d2074440a0bcdef4480c3149bf4726d3, type: 2}
+    - target: {fileID: 3060804136320184010, guid: 15a3ec08d7320d74cb38fd465d3c231e, type: 3}
+      propertyPath: cursorTextures
+      value: 
+      objectReference: {fileID: 11400000, guid: a9d9f2000458c6a4c8cf4f6376f0fb14, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15a3ec08d7320d74cb38fd465d3c231e, type: 3}
 --- !u!1001 &141163913
@@ -4420,6 +4424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 44844f17ec33a8d4a81978b9c6e76f26, type: 2}
+  m_dialogueNode: FoundBaguette
 --- !u!65 &2059628573
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7634,6 +7639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 903244070619647575}
   - component: {fileID: 4046875020347037062}
+  - component: {fileID: 5447559067283434578}
   m_Layer: 0
   m_Name: tuete_links
   m_TagString: Untagged
@@ -7641,6 +7647,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!208 &5447559067283434578
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5447559067283434577}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.56, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.14, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!212 &5483369062961839109
 SpriteRenderer:
   m_ObjectHideFlags: 0
