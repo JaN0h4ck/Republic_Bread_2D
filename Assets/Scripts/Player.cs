@@ -71,11 +71,25 @@ public class Player : MonoBehaviour {
                         }
                     }
                     break;
+                case "SceneDoor":
+                    if (!CheckAgentInRange(hit)) {
+                        agent.SetDestination(new Vector3(hit.point.x, 0, hit.point.z));
+                        StartCoroutine(WaitForAgentToReachSceneDoor(hit));
+                    } else 
+                        hit.transform.GetComponent<SceneDoor>().LocationChangeCurrent(agent);
+                    break;
             }
 
-        } else {
-            Debug.Log("No Hit");
         }
+    }
+
+    private IEnumerator WaitForAgentToReachSceneDoor(RaycastHit hit) {
+        yield return new WaitForEndOfFrame();
+        SceneDoor door = hit.transform.GetComponent<SceneDoor>();
+        while (!CheckAgentInRange(hit)) {
+            yield return new WaitForEndOfFrame();
+        }
+        door.LocationChangeCurrent(agent);
     }
 
     private IEnumerator WaitForAgentToReachItem(RaycastHit hit) {

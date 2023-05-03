@@ -26,8 +26,11 @@ public class CameraFollow : MonoBehaviour {
     private Vector3 m_CameraOffset;
     private Vector3 m_LastPos;
 
+    private Vector3 m_defaultpos;
+
 
     void Start() {
+        m_defaultpos = transform.position;
         agent = target.GetComponent<NavMeshAgent>();
         m_CameraOffset = new Vector3(CameraOffsetX, CameraOffsetY, CameraOffsetZ);
         m_LastPos = transform.position;
@@ -70,6 +73,6 @@ public class CameraFollow : MonoBehaviour {
     }
 
     public void ResetCamera() {
-        transform.position = target.position + m_CameraOffset;
+        transform.position = m_defaultpos;
     }
 }
