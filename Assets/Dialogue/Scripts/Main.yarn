@@ -1,0 +1,81 @@
+title: Start
+---
+<<declare $foundBaguette = false as bool>>
+???: Pssst... he du!
+???: Ja genau du da darüben!
+???: kommt mal rechts zu mir rüber!
+===
+
+title: Kruemel
+---
+Kruemel: Ich sehe du hast es geschafft.
+Kruemel: Ein Vögelchen hat mir gezwitschert, dass du hier rein kommen willst.
+Kruemel: Bisher ist noch nie jemand von deren Versuch zurück gekehrt, aber mal schauen wie du dich schlägst.
+Kruemel: Naja, jedenfalls musst du die linke Maustaste drücken, um dich fortzubewegen.
+Kruemel: Mit der rechten Maustaste kannst du manchmal auch Dinge inspizieren.
+Kruemel: Ausserdem hast du auch einen Inventar auf i.
+Kruemel: Versuch es doch einfach mal!
+===
+
+title: InspectKruemel
+---
+Was ist das denn für ein Krümel?
+Meinen Detektivfähigkeiten ist er auf jeden Fall nicht gewachsen.
+Oder mein Name wäre nicht Benjamin Brötchen!
+===
+
+title: FoundBaguette
+---
+<<set $foundBaguette to true>>
+Igitt. Das liegt wohl schon ein bisschen länger hier rum.
+...
+Egal, vielleicht kann ich es ja brauchen.
+===
+
+title: InspectBaguette
+---
+
+Ein Baguette... Ich glaube, das ist schon ein bisschen länger hier rumgelegen.
+Jemand hat auch auch ausgehöhlt.
+===
+
+title: FoundPretzel
+---
+<<if $foundBaguette == true>>
+    Heute scheinen aber alle ihr Gebäck liegen zu lassen...
+<<else>>
+    Eine Brezel! Die kann ich immer gebrauchen!
+<<endif>>
+===
+
+title: inspectLadder
+---
+Eine Leiter... wo die wohl hin führt?
+===
+
+title: inspectBackLadder
+---
+Da geht es zurück in die Gasse
+===
+
+title: inspectWindow
+---
+Ein Fenster... ob ich da wohl einfach durch kann?
+===
+
+title: foundMirror
+---
+Warum versteckt man denn einen Spiegel unter einem Blumentopf??
+Naja egal, ich stecke ihn mal ein, vielleicht treffe ich ja die Besitzer.
+===
+
+title: End
+---
+Entwickler: Vielen dank fürs Spielen der (zugegebenermaßen etwas kurzen) Demo von Republic Bread!
+Entwickler: Du kannst jetzt noch ein wenig weiter entdecken oder schon dein Feedback da lassen.
+Entwickler: Art von Alina Tremer, Concept Art von Ray Schauer
+Entwickler: Idee von Jan Nothacker und Ray Schauer
+Entwickler: Alles andere von Jan Nothacker
+Entwickler: Danke fürs spielen!
+Benjamin: Danke!
+===

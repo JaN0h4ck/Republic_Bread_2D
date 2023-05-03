@@ -69,9 +69,15 @@ public class Player : MonoBehaviour {
                     agent.SetDestination(new Vector3(hit.point.x, 0, hit.point.z));
                     break;
                 case "Item":
-                    if (!CheckAgentInRange(hit)) {
+                    item = hit.transform.GetComponent<GroundItem>();
+                    float offset;
+                    if (item)
+                        offset = item.PickupRange;
+                    else
+                        offset = .45f;
+                    if (!CheckAgentInRange(hit, offset)) {
                         agent.SetDestination(new Vector3(hit.point.x, 0, hit.point.z));
-                        StartCoroutine(WaitForAgentToReachItem(hit));
+                        StartCoroutine(WaitForAgentToReachItem(hit, offset));
                     } else {
                         item = hit.transform.GetComponent<GroundItem>();
                         if (item) {
@@ -82,6 +88,7 @@ public class Player : MonoBehaviour {
                     }
                     break;
                 case "SceneDoor":
+                    hit.point = new Vector3(hit.point.x, agent.transform.position.y, hit.point.z);
                     if (!CheckAgentInRange(hit)) {
                         agent.SetDestination(new Vector3(hit.point.x, 0, hit.point.z));
                         StartCoroutine(WaitForAgentToReachSceneDoor(hit));
@@ -146,7 +153,7 @@ public class Player : MonoBehaviour {
     }
 
 
-    private IEnumerator WaitForAgentToReachItem(RaycastHit hit) {
+    private IEnumerator WaitForAgentToReachItem(RaycastHit hit, float offset = 0.45f) {
         yield return new WaitForEndOfFrame();
         while (!CheckAgentInRange(hit, .45f)) {
             yield return new WaitForEndOfFrame();
@@ -232,6 +239,6 @@ public class Player : MonoBehaviour {
     }
 
     private void OnApplicationQuit() {
-        inventory.Container.Items = new InventorySlot[24];
+        inventory.Container.Items = new InventorySlot[25];
     }
 }

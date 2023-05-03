@@ -1,14 +1,9 @@
-using JetBrains.Annotations;
-using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using UnityEditor;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 [CreateAssetMenu(fileName = "New Inventory", menuName = "Inventory System/Inventory")]
-public class InventoryObject : ScriptableObject
-{
+public class InventoryObject : ScriptableObject {
     public string savePath;
     public ItemDatabaseObject database;
     public Inventory Container;
@@ -45,7 +40,7 @@ public class InventoryObject : ScriptableObject
     }
 
     public InventorySlot SetFirstEmptySlot(Item _item, int amount) {
-        for (int i = 0;i < Container.Items.Length;i++) {
+        for (int i = 0; i < Container.Items.Length; i++) {
             if (Container.Items[i].ID <= -1) {
                 Container.Items[i].UpdateSlot(_item.id, _item, amount);
                 return Container.Items[i];
@@ -60,14 +55,14 @@ public class InventoryObject : ScriptableObject
         string saveData = JsonUtility.ToJson(this, true);
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         FileStream file = File.Create(string.Concat(Application.persistentDataPath, savePath));
-        binaryFormatter.Serialize(file,saveData);
+        binaryFormatter.Serialize(file, saveData);
         file.Close();
     }
 
     [ContextMenu("Load")]
     public void Load() {
         string path = string.Concat(Application.persistentDataPath, savePath);
-        if(File.Exists(path)) {
+        if (File.Exists(path)) {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             FileStream file = File.Open(path, FileMode.Open);
             JsonUtility.FromJsonOverwrite(binaryFormatter.Deserialize(file).ToString(), this);
@@ -84,7 +79,7 @@ public class InventoryObject : ScriptableObject
 
 [System.Serializable]
 public class Inventory {
-    public InventorySlot[] Items = new InventorySlot[24];
+    public InventorySlot[] Items = new InventorySlot[25];
 }
 
 [System.Serializable]

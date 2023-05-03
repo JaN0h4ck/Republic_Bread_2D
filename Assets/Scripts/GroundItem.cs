@@ -5,6 +5,13 @@ public class GroundItem : MonoBehaviour {
 
     private bool m_hasDialogue;
 
+    [SerializeField]
+    private float m_pickupRange = 0.45f;
+
+    public float PickupRange {
+        get { return m_pickupRange; }
+    }
+
     public bool HasDialogue {
         get { return m_hasDialogue; }
     }
