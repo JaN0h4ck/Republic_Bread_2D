@@ -8,6 +8,7 @@ TagManager:
   - Walkable
   - Item
   - SceneDoor
+  - NPC
   layers:
   - Default
   - TransparentFX
