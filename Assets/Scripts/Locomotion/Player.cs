@@ -95,6 +95,18 @@ public class Player : MonoBehaviour {
                     } else 
                         hit.transform.GetComponent<SceneDoor>().LocationChangeCurrent(agent);
                     break;
+                case "NPC":
+                    hit.point = new Vector3(hit.point.x, agent.transform.position.y, hit.point.z);
+                    if (!CheckAgentInRange(hit)) {
+                        agent.SetDestination(new Vector3(hit.point.x, 0, hit.point.z));
+                        StartCoroutine(WaitForAgentToReachNPC(hit));
+                    } else {
+                        NPC npc = hit.transform.GetComponent<NPC>();
+                        if (npc.hasDialogue) {
+                            dialogueRunner.StartDialogue(npc.dialogueNode);
+                        }
+                    }
+                    break;
             }
 
         }
@@ -150,6 +162,17 @@ public class Player : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
         door.LocationChangeCurrent(agent);
+    }
+
+    private IEnumerator WaitForAgentToReachNPC(RaycastHit hit, float offset = 0.45f) {
+        yield return new WaitForEndOfFrame();
+        while (!CheckAgentInRange(hit, .45f)) {
+            yield return new WaitForEndOfFrame();
+        }
+        NPC npc = hit.transform.GetComponent<NPC>();
+        if(npc.hasDialogue) {
+            dialogueRunner.StartDialogue(npc.dialogueNode);
+        }
     }
 
 

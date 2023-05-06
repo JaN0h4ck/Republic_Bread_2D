@@ -27,6 +27,15 @@ public class DisplayInventory : MonoBehaviour {
         UpdateSlots();
     }
 
+    private void OnDisable() {
+        itemDisplayText.gameObject.SetActive(false);
+        Cursor.SetCursor(cursorTextures.DefaultCursor, cursorTextures.Hotspot, CursorMode.Auto);
+    }
+
+    private void OnEnable() {
+        itemDisplayText.gameObject.SetActive(true);
+    }
+
     private void UpdateSlots() {
         foreach (KeyValuePair<GameObject, InventorySlot> _slot in itemsDisplayed) {
             InventorySlotAdapter adapter = _slot.Key.GetComponent<InventorySlotAdapter>();

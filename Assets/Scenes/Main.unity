@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 138532461}
   m_Layer: 0
   m_Name: spiegel
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 7ca99cef7559385408f532af46390354, type: 2}
-  m_pickupRange: 0.45
+  m_pickupRange: 0.7
   m_dialogueNode: foundMirror
 --- !u!65 &138532463
 BoxCollider:
@@ -2047,6 +2047,8 @@ GameObject:
   - component: {fileID: 777221061}
   - component: {fileID: 777221063}
   - component: {fileID: 777221062}
+  - component: {fileID: 777221065}
+  - component: {fileID: 777221064}
   m_Layer: 0
   m_Name: Kruemel
   m_TagString: NPC
@@ -2148,6 +2150,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dialogueNode: Kruemel
   m_inspectNode: InspectKruemel
+--- !u!208 &777221064
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777221059}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.3, y: 0.4, z: 0.3}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: -0.12, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!136 &777221065
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777221059}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 0.8
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.12, z: 0}
 --- !u!4 &815868777 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 45ed7df2945e3c2428e8b93a910a226f, type: 3}
