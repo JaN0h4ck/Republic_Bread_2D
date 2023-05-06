@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
+using UnityEditor;
 
 public class DisplayInventory : MonoBehaviour {
     private MouseItem mouseItem = new MouseItem();
@@ -69,6 +72,16 @@ public class DisplayInventory : MonoBehaviour {
 
 
     #region Input
+    public void PrepareInventoryClose() {
+        Destroy(mouseItem._object);
+        mouseItem.item = null;
+        Cursor.SetCursor(cursorTextures.DefaultCursor, cursorTextures.Hotspot, CursorMode.Auto);
+        mouseItem.hoverObject = null;
+        mouseItem.hoverSlot = null;
+        itemDisplayText.text = "";
+        mouseItem.canCraft = false;
+    }
+
     private void AddEvent(GameObject obj, EventTriggerType type, UnityAction<BaseEventData> action) {
         EventTrigger trigger = obj.GetComponent<EventTrigger>();
         EventTrigger.Entry entry = new EventTrigger.Entry();
@@ -127,7 +140,8 @@ public class DisplayInventory : MonoBehaviour {
                 inventory.SwapItems(itemsDisplayed[obj], itemsDisplayed[mouseItem.hoverObject]);
             }
         } else {
-            //inventory.RemoveItem(itemsDisplayed[obj].Item);
+            if (CalculateRaycast(Pointer.current.position, out RaycastHit hit))
+                HandleDragItemOutsideInventory();
         }
         Destroy(mouseItem._object);
         mouseItem.item = null;
@@ -136,6 +150,15 @@ public class DisplayInventory : MonoBehaviour {
         if (mouseItem._object != null) {
             mouseItem._object.GetComponent<RectTransform>().position = Input.mousePosition;
         }
+    }
+    #endregion
+    #region helpers
+    private void HandleDragItemOutsideInventory() {
+
+    }
+    private bool CalculateRaycast(Vector2Control pointerPosition, out RaycastHit hit) {
+        Ray ray = Camera.main.ScreenPointToRay(pointerPosition.value);
+        return Physics.Raycast(ray, out hit, Mathf.Infinity);
     }
     #endregion
 }

@@ -21,6 +21,7 @@ public class UI_Handler : MonoBehaviour {
 
     private void ToggleInventory(InputAction.CallbackContext obj) {
         if (isInventoryOpen) {
+            inventorySystem.GetComponent<DisplayInventory>().PrepareInventoryClose();
             inventorySystem.SetActive(false);
             isInventoryOpen = false;
             inputActions.Player.Interact.Enable();
